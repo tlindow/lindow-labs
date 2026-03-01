@@ -25,43 +25,43 @@ const topics = [
 
 export default function Speaking() {
   return (
-    <section id="speaking" className="py-24 px-6">
+    <section id="speaking" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="mx-auto max-w-5xl">
         <div className="flex items-center gap-3">
-          <Mic size={28} className="text-accent" />
+          <Mic size={24} className="text-lavender sm:w-7 sm:h-7" />
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
             Speaking
           </h2>
         </div>
-        <div className="mt-2 ml-10 h-1 w-16 rounded-full bg-accent" />
+        <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-lavender" />
 
-        <p className="mt-6 text-muted text-base sm:text-lg max-w-2xl">
+        <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
           I&rsquo;m building toward sharing ideas on stage and in virtual
           events. Here are topics I&rsquo;m excited to talk about.
         </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2">
           {topics.map((t) => (
             <div
               key={t.title}
-              className="rounded-2xl border border-border bg-surface p-6 hover:border-accent/40 transition-colors"
+              className="rounded-2xl border border-border bg-surface p-5 sm:p-6 hover:border-lavender/40 transition-colors"
             >
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-base sm:text-lg font-semibold text-foreground">
                 {t.title}
               </h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed">
+              <p className="mt-1.5 text-sm text-muted leading-relaxed">
                 {t.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <a
             href="https://www.linkedin.com/in/tlindow"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-medium text-teal hover:underline"
           >
             Interested in having me speak? Let&rsquo;s talk
             <ArrowRight size={14} />

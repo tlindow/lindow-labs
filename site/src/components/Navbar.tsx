@@ -5,9 +5,9 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "About", href: "#about" },
+  { label: "Work With Me", href: "#mentoring" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Speaking", href: "#speaking" },
-  { label: "Mentoring", href: "#mentoring" },
   { label: "Content", href: "#content" },
   { label: "Connect", href: "#connect" },
 ];
@@ -17,16 +17,15 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
         <a
           href="#"
-          className="font-display text-xl tracking-tight text-foreground"
+          className="font-display text-lg sm:text-xl tracking-tight text-foreground"
         >
           Tyler Lindow
         </a>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -39,26 +38,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-muted hover:text-foreground"
+          className="md:hidden p-2 -mr-2 text-muted hover:text-foreground"
           aria-label="Toggle navigation"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-border bg-surface">
-          <ul className="flex flex-col py-4 px-6 gap-4">
+          <ul className="flex flex-col py-3 px-4 gap-1">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-muted hover:text-foreground transition-colors"
+                  className="block py-2.5 px-3 rounded-lg text-[15px] font-medium text-muted hover:text-foreground hover:bg-surface-alt transition-colors"
                 >
                   {l.label}
                 </a>

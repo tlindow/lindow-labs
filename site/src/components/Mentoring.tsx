@@ -1,71 +1,120 @@
-import { Users, ArrowRight } from "lucide-react";
+import {
+  Code2,
+  Compass,
+  FolderOpen,
+  MessageCircle,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 
 const offerings = [
   {
+    icon: Code2,
     title: "Code Reviews & Pairing",
     description:
-      "Walk through your code together, talk through trade-offs, and level up your problem-solving.",
+      "Walk through your code together, talk through trade-offs, and sharpen your problem-solving.",
   },
   {
-    title: "Career Guidance",
+    icon: Compass,
+    title: "Career Coaching",
     description:
-      "Navigate bootcamps, self-study, the job search, and the early stages of a dev career.",
+      "Navigate bootcamps, self-study, the job search, or your next career move with someone who's been there.",
   },
   {
-    title: "Portfolio Building",
+    icon: FolderOpen,
+    title: "Portfolio & Brand Building",
     description:
-      "Build a GitHub presence and project portfolio that shows what you can do.",
+      "Build a GitHub presence, personal site, and project portfolio that shows what you can really do.",
   },
   {
-    title: "General Q&A",
+    icon: MessageCircle,
+    title: "Open Office Hours",
     description:
-      "No agenda needed — just bring your questions and we'll figure it out.",
+      "No agenda needed — bring your questions, your ideas, or just come to think out loud.",
   },
 ];
 
 export default function Mentoring() {
   return (
-    <section id="mentoring" className="py-24 px-6 bg-surface-alt">
-      <div className="mx-auto max-w-5xl">
-        <div className="flex items-center gap-3">
-          <Users size={28} className="text-accent" />
-          <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Mentoring
+    <section id="mentoring" className="relative overflow-hidden">
+      {/* Teal hero banner — white on color */}
+      <div className="bg-teal py-16 sm:py-24 px-4 sm:px-6">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white/90 mb-6">
+            <Sparkles size={14} />
+            Now booking 1:1 sessions
+          </div>
+
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
+            Work With Me
           </h2>
-        </div>
-        <div className="mt-2 ml-10 h-1 w-16 rounded-full bg-accent" />
 
-        <p className="mt-6 text-muted text-base sm:text-lg max-w-2xl">
-          I believe in paying it forward. Whether you&rsquo;re just starting
-          out or looking to level up, I&rsquo;m happy to chat.
-        </p>
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
+            I love helping developers grow. Whether you&rsquo;re just starting
+            out, switching careers, or looking to level up &mdash; I&rsquo;d
+            genuinely enjoy working with you. Let&rsquo;s figure it out together.
+          </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {offerings.map((o) => (
-            <div
-              key={o.title}
-              className="rounded-2xl border border-border bg-surface p-6 hover:border-accent/40 transition-colors"
-            >
-              <h3 className="text-lg font-semibold text-foreground">
-                {o.title}
-              </h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed">
-                {o.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10">
           <a
             href="https://www.linkedin.com/in/tlindow"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-teal hover:bg-white/90 transition-colors"
           >
-            Want to set up a mentoring session? Send me a message
-            <ArrowRight size={14} />
+            Book a Session
+            <ArrowRight size={15} />
           </a>
+        </div>
+      </div>
+
+      {/* Offerings grid */}
+      <div className="bg-teal-light py-14 sm:py-20 px-4 sm:px-6">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal mb-10 sm:mb-12">
+            How I can help
+          </p>
+
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+            {offerings.map((o) => {
+              const Icon = o.icon;
+              return (
+                <div
+                  key={o.title}
+                  className="rounded-2xl bg-surface p-5 sm:p-6 border border-teal/10 hover:shadow-md transition-shadow"
+                >
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-teal/10 text-teal">
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
+                    {o.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm text-muted leading-relaxed">
+                    {o.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-teal/10 p-6 sm:p-8 text-center">
+            <p className="text-base sm:text-lg font-medium text-foreground">
+              Not sure where to start? That&rsquo;s totally fine.
+            </p>
+            <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
+              Send me a message on LinkedIn and tell me a bit about where
+              you&rsquo;re at. We&rsquo;ll find the right way to work together
+              &mdash; no pressure, just a conversation.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/tlindow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-teal hover:underline"
+            >
+              Send me a message
+              <ArrowRight size={14} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

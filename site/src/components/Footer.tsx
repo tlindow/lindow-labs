@@ -20,26 +20,25 @@ const socials = [
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Work With Me", href: "#mentoring" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Speaking", href: "#speaking" },
-  { label: "Mentoring", href: "#mentoring" },
   { label: "Content", href: "#content" },
 ];
 
 export default function Footer() {
   return (
-    <footer id="connect" className="py-16 px-6 border-t border-border">
+    <footer id="connect" className="py-12 sm:py-16 px-4 sm:px-6 border-t border-border">
       <div className="mx-auto max-w-5xl">
-        <div className="flex flex-col sm:flex-row items-start justify-between gap-12">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-12">
           <div>
-            <p className="font-display text-2xl text-foreground">
+            <p className="font-display text-xl sm:text-2xl text-foreground">
               Tyler Lindow
             </p>
             <p className="mt-2 text-sm text-muted max-w-xs">
-              Developer, builder, lifelong learner. Always open to a good
-              conversation.
+              Developer, builder, mentor. Always open to a good conversation.
             </p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-5 flex gap-3">
               {socials.map((s) => {
                 const Icon = s.icon;
                 return (
@@ -49,9 +48,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border text-muted hover:text-foreground hover:border-foreground/30 transition-colors"
+                    className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-border text-muted hover:text-teal hover:border-teal/30 transition-colors"
                   >
-                    <Icon size={18} />
+                    <Icon size={16} />
                   </a>
                 );
               })}
@@ -59,10 +58,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-foreground uppercase tracking-wider">
+            <p className="text-xs font-semibold text-foreground uppercase tracking-wider">
               Navigation
             </p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-3 space-y-1.5">
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <a
@@ -77,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center">
+        <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted">
             &copy; {new Date().getFullYear()} Tyler Lindow. Built with Next.js
             and Tailwind CSS.

@@ -1,13 +1,13 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="mx-auto max-w-3xl">
         <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
           About Me
         </h2>
-        <div className="mt-2 h-1 w-16 rounded-full bg-accent" />
+        <div className="mt-2 h-1 w-16 rounded-full bg-teal" />
 
-        <div className="mt-10 space-y-6 text-base sm:text-lg leading-relaxed text-muted">
+        <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
           <p>
             I got into software development because I love making things. I went
             through an immersive coding program, dove into JavaScript and React,
@@ -16,23 +16,25 @@ export default function About() {
             feedback of seeing something come to life in a browser.
           </p>
           <p>
-            I&rsquo;m drawn to projects that sit at the intersection of
-            technology and creativity &mdash; whether that&rsquo;s an
-            interactive booking system, a generative art sketch, or a tool that
-            makes someone&rsquo;s workflow a little easier.
+            I&rsquo;m drawn to projects at the intersection of technology and
+            creativity &mdash; whether that&rsquo;s an interactive booking
+            system, a generative art sketch, or a tool that makes
+            someone&rsquo;s workflow easier. I&rsquo;m passionate about AI in
+            software and always looking to learn more about what people are
+            building.
           </p>
           <p>
             Outside of code, I&rsquo;m curious about storytelling, design,
             and how technology brings people together. Right now I&rsquo;m
-            focused on building in public, creating video content, and looking
-            for opportunities to speak and mentor.
+            focused on building in public, mentoring other developers, and
+            creating content.
           </p>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-3 gap-8">
+        <div className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8">
           <Stat label="GitHub Repos" value="45+" />
           <Stat label="Primary Stack" value="React / TS" />
-          <Stat label="Focus" value="Building in Public" />
+          <Stat label="Focus" value="Mentoring" />
         </div>
       </div>
     </section>
@@ -42,8 +44,8 @@ export default function About() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="text-center sm:text-left">
-      <p className="text-2xl font-semibold text-foreground">{value}</p>
-      <p className="mt-1 text-sm text-muted">{label}</p>
+      <p className="text-xl sm:text-2xl font-semibold text-foreground">{value}</p>
+      <p className="mt-0.5 text-xs sm:text-sm text-muted">{label}</p>
     </div>
   );
 }
