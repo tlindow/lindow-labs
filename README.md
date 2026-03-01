@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tim Lindow — Personal Website
+
+A modern personal website framework built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [TypeScript](https://www.typescriptlang.org/).
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, highlights, values, CTA |
+| `/about` | Bio, career timeline, quick facts |
+| `/speaking` | Topics, what to expect, event listings |
+| `/mentoring` | Focus areas, process, testimonials |
+| `/portfolio` | Video content, projects, content roadmap |
+| `/newsletter` | Subscribe form, topic preview, archive |
+| `/blog` | Post listings, categories |
+| `/contact` | Contact form, sidebar with social links |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `src/lib/siteConfig.ts` to update your name, tagline, description, and social links. All pages pull from this central config.
 
-## Learn More
+## Customization Guide
 
-To learn more about Next.js, take a look at the following resources:
+- **Add real experience:** Update the timeline in `src/app/about/page.tsx` with your actual career history.
+- **Add blog posts:** Create files in `src/app/blog/[slug]/page.tsx` or connect a CMS.
+- **Embed videos:** Replace placeholder video cards in `src/app/portfolio/page.tsx` with real YouTube/LinkedIn embeds.
+- **Connect newsletter:** Wire up the form in `src/app/newsletter/NewsletterForm.tsx` to ConvertKit, Mailchimp, Buttondown, etc.
+- **Connect contact form:** Wire up `src/app/contact/ContactForm.tsx` to Formspree, Formspark, or a custom API route.
+- **Add events:** Populate the speaking events section with real dates and venues.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy to [Vercel](https://vercel.com/) with one click, or any platform that supports Next.js:
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS 4
+- **Icons:** Lucide React
+- **Language:** TypeScript
+- **Font:** Inter (via `next/font`)
