@@ -1,25 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #fafaf8;
-  --color-foreground: #1a1a1a;
+  --color-background: #FFFDF7;
+  --color-foreground: #2D2A26;
 
-  --color-teal: #2a9d8f;
-  --color-teal-dark: #238a7e;
-  --color-teal-light: #e6f5f3;
+  /* pastel rainbow */
+  --color-rose: #F9A8D4;
+  --color-rose-light: #FDF2F8;
+  --color-peach: #FDBA74;
+  --color-peach-light: #FFF7ED;
+  --color-amber: #FDE68A;
+  --color-amber-light: #FFFBEB;
+  --color-mint: #6EE7B7;
+  --color-mint-light: #ECFDF5;
+  --color-sky: #7DD3FC;
+  --color-sky-light: #F0F9FF;
+  --color-indigo: #A5B4FC;
+  --color-indigo-light: #EEF2FF;
+  --color-violet: #C4B5FD;
+  --color-violet-light: #F5F3FF;
 
-  --color-coral: #e07a5f;
-  --color-coral-light: #fdf0ec;
-
-  --color-lavender: #7c6fa0;
-  --color-lavender-light: #f0edf6;
-
-  --color-mint: #a8dadc;
-
-  --color-surface: #ffffff;
-  --color-surface-alt: #f5f4f0;
-  --color-muted: #5f6368;
-  --color-border: #e5e5e3;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #FFF9F0;
+  --color-muted: #7A7570;
+  --color-border: #EDE8E0;
 
   --font-sans: var(--font-inter);
   --font-display: var(--font-dm-serif);
@@ -35,5 +39,5 @@ body {
 }
 
 ::selection {
-  background-color: #2a9d8f30;
+  background-color: #C4B5FD40;
 }

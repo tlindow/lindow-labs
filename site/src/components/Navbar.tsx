@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
         <a
           href="#"
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-surface">
+        <div className="md:hidden border-t border-border bg-background">
           <ul className="flex flex-col py-3 px-4 gap-1">
             {links.map((l) => (
               <li key={l.href}>

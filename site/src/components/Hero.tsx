@@ -3,15 +3,17 @@ import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center px-4 sm:px-6 pt-14 sm:pt-16 overflow-hidden">
-      {/* Watercolor-inspired gradient background */}
+      {/* Pastel rainbow gradient blurs */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-[60%] h-[60%] rounded-full bg-teal/8 blur-[100px]" />
-        <div className="absolute bottom-0 right-0 w-[50%] h-[50%] rounded-full bg-coral/8 blur-[100px]" />
-        <div className="absolute top-1/3 right-1/4 w-[40%] h-[40%] rounded-full bg-lavender/6 blur-[100px]" />
+        <div className="absolute top-[5%] left-[5%] w-[45%] h-[45%] rounded-full bg-rose/20 blur-[120px]" />
+        <div className="absolute top-[10%] right-[10%] w-[40%] h-[40%] rounded-full bg-sky/20 blur-[120px]" />
+        <div className="absolute bottom-[15%] left-[20%] w-[35%] h-[35%] rounded-full bg-violet/20 blur-[120px]" />
+        <div className="absolute bottom-[5%] right-[15%] w-[40%] h-[40%] rounded-full bg-mint/15 blur-[120px]" />
+        <div className="absolute top-[40%] left-[40%] w-[30%] h-[30%] rounded-full bg-amber/15 blur-[120px]" />
       </div>
 
       <div className="max-w-3xl text-center">
-        <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-teal mb-3 sm:mb-4">
+        <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-violet mb-3 sm:mb-4">
           Software Developer &middot; Builder &middot; Mentor
         </p>
 
@@ -28,7 +30,7 @@ export default function Hero() {
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#mentoring"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-medium text-white hover:bg-teal-dark transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors"
           >
             Work With Me
           </a>

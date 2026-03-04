@@ -13,34 +13,42 @@ const offerings = [
     title: "Code Reviews & Pairing",
     description:
       "Walk through your code together, talk through trade-offs, and sharpen your problem-solving.",
+    color: "bg-sky-light",
+    iconColor: "text-sky",
   },
   {
     icon: Compass,
     title: "Career Coaching",
     description:
       "Navigate bootcamps, self-study, the job search, or your next career move with someone who's been there.",
+    color: "bg-peach-light",
+    iconColor: "text-peach",
   },
   {
     icon: FolderOpen,
     title: "Portfolio & Brand Building",
     description:
       "Build a GitHub presence, personal site, and project portfolio that shows what you can really do.",
+    color: "bg-mint-light",
+    iconColor: "text-mint",
   },
   {
     icon: MessageCircle,
     title: "Open Office Hours",
     description:
       "No agenda needed — bring your questions, your ideas, or just come to think out loud.",
+    color: "bg-violet-light",
+    iconColor: "text-violet",
   },
 ];
 
 export default function Mentoring() {
   return (
     <section id="mentoring" className="relative overflow-hidden">
-      {/* Teal hero banner — white on color */}
-      <div className="bg-teal py-16 sm:py-24 px-4 sm:px-6">
+      {/* Pastel violet banner */}
+      <div className="bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white/90 mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6">
             <Sparkles size={14} />
             Now booking 1:1 sessions
           </div>
@@ -59,7 +67,7 @@ export default function Mentoring() {
             href="https://www.linkedin.com/in/tlindow"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-teal hover:bg-white/90 transition-colors"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-colors"
           >
             Book a Session
             <ArrowRight size={15} />
@@ -67,10 +75,10 @@ export default function Mentoring() {
         </div>
       </div>
 
-      {/* Offerings grid */}
-      <div className="bg-teal-light py-14 sm:py-20 px-4 sm:px-6">
+      {/* Offerings grid on cream */}
+      <div className="bg-surface-alt py-14 sm:py-20 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal mb-10 sm:mb-12">
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
             How I can help
           </p>
 
@@ -80,9 +88,9 @@ export default function Mentoring() {
               return (
                 <div
                   key={o.title}
-                  className="rounded-2xl bg-surface p-5 sm:p-6 border border-teal/10 hover:shadow-md transition-shadow"
+                  className="rounded-2xl bg-surface p-5 sm:p-6 border border-border hover:shadow-md transition-shadow"
                 >
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-teal/10 text-teal">
+                  <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${o.color} ${o.iconColor}`}>
                     <Icon size={20} />
                   </div>
                   <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
@@ -96,7 +104,7 @@ export default function Mentoring() {
             })}
           </div>
 
-          <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-teal/10 p-6 sm:p-8 text-center">
+          <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg font-medium text-foreground">
               Not sure where to start? That&rsquo;s totally fine.
             </p>
@@ -109,7 +117,7 @@ export default function Mentoring() {
               href="https://www.linkedin.com/in/tlindow"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-teal hover:underline"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline"
             >
               Send me a message
               <ArrowRight size={14} />

@@ -5,7 +5,7 @@ export default function About() {
         <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
           About Me
         </h2>
-        <div className="mt-2 h-1 w-16 rounded-full bg-teal" />
+        <div className="mt-2 h-1 w-16 rounded-full bg-sky" />
 
         <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
           <p>
@@ -32,18 +32,18 @@ export default function About() {
         </div>
 
         <div className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8">
-          <Stat label="GitHub Repos" value="45+" />
-          <Stat label="Primary Stack" value="React / TS" />
-          <Stat label="Focus" value="Mentoring" />
+          <Stat label="GitHub Repos" value="45+" color="bg-rose-light" />
+          <Stat label="Primary Stack" value="React / TS" color="bg-sky-light" />
+          <Stat label="Focus" value="Mentoring" color="bg-mint-light" />
         </div>
       </div>
     </section>
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="text-center sm:text-left">
+    <div className={`text-center rounded-xl ${color} py-4 px-2`}>
       <p className="text-xl sm:text-2xl font-semibold text-foreground">{value}</p>
       <p className="mt-0.5 text-xs sm:text-sm text-muted">{label}</p>
     </div>
