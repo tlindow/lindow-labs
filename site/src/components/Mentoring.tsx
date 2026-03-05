@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Code2,
   Compass,
@@ -6,6 +8,9 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+import { motion } from "framer-motion";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
+import MagneticButton from "@/components/animations/MagneticButton";
 
 const offerings = [
   {
@@ -46,81 +51,93 @@ export default function Mentoring() {
   return (
     <section id="mentoring" className="relative overflow-hidden">
       {/* Pastel violet banner */}
-      <div className="bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6">
-            <Sparkles size={14} />
-            Now booking 1:1 sessions
-          </div>
+      <div className="relative bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
+        {/* Animated gradient overlay */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-violet/0 via-white/10 to-violet/0"
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        />
 
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
-            Work With Me
-          </h2>
+        <div className="relative mx-auto max-w-4xl text-center">
+          <ScrollReveal direction="none">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
+              <Sparkles size={14} className="animate-float" />
+              Now booking 1:1 sessions
+            </div>
 
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
-            I love helping developers grow. Whether you&rsquo;re just starting
-            out, switching careers, or looking to level up &mdash; I&rsquo;d
-            genuinely enjoy working with you. Let&rsquo;s figure it out together.
-          </p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
+              Work With Me
+            </h2>
 
-          <a
-            href="https://calendly.com/tylerlindow/elevate"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-colors"
-          >
-            Book a Session
-            <ArrowRight size={15} />
-          </a>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
+              I love helping developers grow. Whether you&rsquo;re just starting
+              out, switching careers, or looking to level up &mdash; I&rsquo;d
+              genuinely enjoy working with you. Let&rsquo;s figure it out together.
+            </p>
+
+            <MagneticButton
+              href="https://calendly.com/tylerlindow/elevate"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-all hover:shadow-xl hover:shadow-white/20"
+            >
+              Book a Session
+              <ArrowRight size={15} />
+            </MagneticButton>
+          </ScrollReveal>
         </div>
       </div>
 
       {/* Offerings grid on cream */}
       <div className="bg-surface-alt py-14 sm:py-20 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
-            How I can help
-          </p>
+          <ScrollReveal>
+            <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
+              How I can help
+            </p>
+          </ScrollReveal>
 
-          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+          <StaggerContainer className="grid gap-4 sm:gap-6 sm:grid-cols-2" staggerDelay={0.1}>
             {offerings.map((o) => {
               const Icon = o.icon;
               return (
-                <div
-                  key={o.title}
-                  className="rounded-2xl bg-surface p-5 sm:p-6 border border-border hover:shadow-md transition-shadow"
-                >
-                  <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${o.color} ${o.iconColor}`}>
-                    <Icon size={20} />
+                <StaggerItem key={o.title}>
+                  <div className="rounded-2xl bg-surface p-5 sm:p-6 border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${o.color} ${o.iconColor}`}>
+                      <Icon size={20} />
+                    </div>
+                    <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
+                      {o.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm text-muted leading-relaxed">
+                      {o.description}
+                    </p>
                   </div>
-                  <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
-                    {o.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm text-muted leading-relaxed">
-                    {o.description}
-                  </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
 
-          <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
-            <p className="text-base sm:text-lg font-medium text-foreground">
-              Not sure where to start? That&rsquo;s totally fine.
-            </p>
-            <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
-              Send me a message and tell me a bit about where you&rsquo;re at.
-              We&rsquo;ll find the right way to work together &mdash; no
-              pressure, just a conversation.
-            </p>
-            <a
-              href="mailto:tyler.lindow@gmail.com"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline"
-            >
-              Send me a message
-              <ArrowRight size={14} />
-            </a>
-          </div>
+          <ScrollReveal delay={0.2}>
+            <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
+              <p className="text-base sm:text-lg font-medium text-foreground">
+                Not sure where to start? That&rsquo;s totally fine.
+              </p>
+              <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
+                Send me a message and tell me a bit about where you&rsquo;re at.
+                We&rsquo;ll find the right way to work together &mdash; no
+                pressure, just a conversation.
+              </p>
+              <a
+                href="mailto:tyler.lindow@gmail.com"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
+              >
+                Send me a message
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
