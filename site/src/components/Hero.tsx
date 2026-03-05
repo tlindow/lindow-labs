@@ -16,9 +16,8 @@ export default function Hero() {
       <div className="max-w-3xl text-center">
         <div className="mb-6 sm:mb-8 flex justify-center">
           <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
-            {/* Add your photo as public/profile.jpg and change src to /profile.jpg */}
             <Image
-              src="/profile.svg"
+              src="/IMG_0591.jpeg"
               alt="Tyler Lindow"
               fill
               sizes="(max-width: 640px) 96px, 128px"
