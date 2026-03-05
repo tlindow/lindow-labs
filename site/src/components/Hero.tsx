@@ -121,6 +121,9 @@ export default function Hero() {
           <ArrowDown size={20} />
         </motion.a>
       </div>
+
+      {/* Gradient fade into the next section for a seamless scroll */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none bg-gradient-to-b from-transparent to-background" />
     </section>
   );
 }

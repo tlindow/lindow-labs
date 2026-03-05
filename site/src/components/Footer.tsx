@@ -36,7 +36,7 @@ export default function Footer() {
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-12">
             <div>
-              <p className="font-display text-xl sm:text-2xl text-foreground">
+              <p className="font-display font-semibold text-xl sm:text-2xl text-foreground">
                 Tyler Lindow
               </p>
               <p className="mt-2 text-sm text-muted max-w-xs">

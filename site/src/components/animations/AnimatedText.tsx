@@ -32,11 +32,11 @@ export default function AnimatedText({
         <motion.span
           key={i}
           className="inline-block mr-[0.25em]"
-          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{
-            duration: 0.5,
-            delay: delay + i * 0.08,
+            duration: 0.45,
+            delay: delay + i * 0.07,
             ease: [0.25, 0.4, 0.25, 1],
           }}
         >

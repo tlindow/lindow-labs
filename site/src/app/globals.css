@@ -26,7 +26,7 @@
   --color-border: #EDE8E0;
 
   --font-sans: var(--font-inter);
-  --font-display: var(--font-dm-serif);
+  --font-display: var(--font-plus-jakarta-sans);
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-shimmer: shimmer 3s ease-in-out infinite;
@@ -67,6 +67,16 @@ html {
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+}
+
+/* Geometric sans headings need explicit weight to match the visual impact
+   that DM Serif Display provided at its default 400 weight */
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-weight: 700;
 }
 
 ::selection {
