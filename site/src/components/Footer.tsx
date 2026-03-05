@@ -40,7 +40,8 @@ export default function Footer() {
                 Tyler Lindow
               </p>
               <p className="mt-2 text-sm text-muted max-w-xs">
-                Developer, builder, mentor. Always open to a good conversation.
+                Developer, builder, mentor. Building toward services, products,
+                and Hapi Brewing. Always open to a good conversation.
               </p>
               <div className="mt-5 flex gap-3">
                 {socials.map((s) => {

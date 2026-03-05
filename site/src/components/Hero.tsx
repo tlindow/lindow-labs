@@ -63,7 +63,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.9 }}
         >
           I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
+          I learn along the way. Building toward services, products, and a
+          long-term vision. Based in San Diego.
         </motion.p>
 
         <motion.div

@@ -18,11 +18,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Tyler Lindow — Developer, Builder, Creator",
   description:
-    "Personal website of Tyler Lindow. Software developer, creative coder, and lifelong learner building for the web.",
+    "Personal website of Tyler Lindow. Software developer, mentor, and builder. Formerly at The Tech Interactive and Computer History Museum. Building toward services, products, and Hapi Brewing.",
   openGraph: {
     title: "Tyler Lindow — Developer, Builder, Creator",
     description:
-      "Software developer, creative coder, and lifelong learner building for the web.",
+      "Software developer, mentor, and builder. Formerly at The Tech Interactive and Computer History Museum. Building toward services, products, and Hapi Brewing.",
     type: "website",
   },
 };

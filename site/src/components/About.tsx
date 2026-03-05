@@ -27,6 +27,17 @@ export default function About() {
               of seeing something come to life in a browser.
             </p>
             <p>
+              My roots run through hands-on learning and computer history. I spent
+              time at{" "}
+              <span className="text-foreground font-medium">The Tech Interactive</span>
+              &nbsp;&mdash; a museum where young people tinker with technology
+              &mdash; and at the{" "}
+              <span className="text-foreground font-medium">Computer History Museum</span>
+              {" "}in Mountain View, where I ran workshops and led tours. That
+              appreciation for how we got here informs how I think about where
+              we&rsquo;re going.
+            </p>
+            <p>
               I&rsquo;m drawn to projects at the intersection of technology and
               creativity &mdash; whether that&rsquo;s an interactive booking
               system, a generative art sketch, or a tool that makes
@@ -36,9 +47,14 @@ export default function About() {
             </p>
             <p>
               Outside of code, I&rsquo;m curious about storytelling, design,
-              and how technology brings people together. Right now I&rsquo;m
-              focused on building in public, mentoring other developers, and
-              creating content.
+              and how technology brings people together. Long term, I&rsquo;m
+              building toward{" "}
+              <span className="text-foreground font-medium">Hapi Brewing</span>
+              &nbsp;&mdash; my company (LLC) focused on hop wine. It&rsquo;s
+              pre-revenue, but it&rsquo;s the vision I&rsquo;m working toward.
+              Right now I&rsquo;m focused on building in public, mentoring other
+              developers, and creating content &mdash; and I&rsquo;m building this
+              site to eventually sell my services and point people to my products.
             </p>
           </div>
         </ScrollReveal>

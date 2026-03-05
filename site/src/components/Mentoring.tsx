@@ -61,8 +61,10 @@ export default function Mentoring() {
 
         <div className="relative mx-auto max-w-4xl text-center">
           <ScrollReveal direction="none">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
-              <Sparkles size={14} className="animate-float" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm overflow-hidden">
+              <span className="inline-flex shrink-0">
+                <Sparkles size={14} className="animate-pulse" />
+              </span>
               Now booking 1:1 sessions
             </div>
 
