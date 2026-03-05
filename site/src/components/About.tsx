@@ -9,11 +9,14 @@ export default function About() {
 
         <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
           <p>
-            I got into software development because I love making things. I went
-            through an immersive coding program, dove into JavaScript and React,
-            and never looked back. Building for the web scratches every itch I
-            have &mdash; problem-solving, design, creativity, and the instant
-            feedback of seeing something come to life in a browser.
+            I got into software development because I realized I had no idea how
+            software worked. At the time I was doing research at the Field
+            Museum in Chicago when I saw someone pull up a terminal and open an
+            application that visitors would interact with. I went through an
+            immersive coding program, dove into JavaScript and React, and never
+            looked back. Building for the web scratches every itch I have
+            &mdash; problem-solving, design, creativity, and the instant feedback
+            of seeing something come to life in a browser.
           </p>
           <p>
             I&rsquo;m drawn to projects at the intersection of technology and

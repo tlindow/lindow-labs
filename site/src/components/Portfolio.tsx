@@ -2,8 +2,8 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Dreaming with Marisol",
-    description: "A creative, story-driven application.",
+    title: "Dreaming with Marisól",
+    description: "My wife's business website.",
     tech: ["TypeScript"],
     url: "https://github.com/tlindow/dreamingwithmarisol",
     accent: "group-hover:border-rose/40",

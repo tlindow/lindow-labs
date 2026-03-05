@@ -23,8 +23,7 @@ export default function Hero() {
 
         <p className="mt-4 sm:mt-6 text-base sm:text-xl leading-relaxed text-muted max-w-2xl mx-auto px-2">
           I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego, currently at{" "}
-          <span className="text-foreground font-medium">Affirm</span>.
+          I learn along the way. Based in San Diego.
         </p>
 
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
