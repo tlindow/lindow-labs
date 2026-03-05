@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
           <a
             href="#"
-            className="font-display text-lg sm:text-xl tracking-tight text-foreground"
+            className="font-display font-semibold text-lg sm:text-xl tracking-tight text-foreground"
           >
             Tyler Lindow
           </a>

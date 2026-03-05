@@ -12,32 +12,32 @@ interface Orb {
 
 const orbs: Orb[] = [
   {
-    className: "top-[5%] left-[5%] w-[40%] h-[40%] bg-indigo/30",
+    className: "top-[5%] left-[5%] w-[45%] h-[45%] bg-rose/20",
     x: ["0%", "3%"],
     y: ["0%", "4%"],
     scale: [1, 1.1],
-    duration: 14,
+    duration: 12,
   },
   {
-    className: "top-[10%] right-[10%] w-[35%] h-[35%] bg-sky/20",
+    className: "top-[10%] right-[10%] w-[40%] h-[40%] bg-sky/20",
     x: ["0%", "-3%"],
     y: ["0%", "3%"],
     scale: [1, 1.08],
-    duration: 18,
+    duration: 15,
   },
   {
-    className: "bottom-[15%] left-[20%] w-[30%] h-[30%] bg-violet/25",
+    className: "bottom-[15%] left-[20%] w-[35%] h-[35%] bg-violet/20",
     x: ["0%", "4%"],
     y: ["0%", "-3%"],
     scale: [1, 1.12],
-    duration: 20,
+    duration: 18,
   },
   {
-    className: "bottom-[5%] right-[15%] w-[35%] h-[35%] bg-mint/15",
+    className: "bottom-[5%] right-[15%] w-[40%] h-[40%] bg-mint/15",
     x: ["0%", "-3%"],
     y: ["0%", "-4%"],
     scale: [1, 1.1],
-    duration: 16,
+    duration: 14,
   },
 ];
 
@@ -64,10 +64,10 @@ export default function FloatingOrbs() {
       ))}
 
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px)",
+            "linear-gradient(var(--color-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--color-foreground) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />

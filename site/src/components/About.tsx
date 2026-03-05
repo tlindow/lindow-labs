@@ -61,7 +61,7 @@ export default function About() {
 
 function Stat({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className={`text-center rounded-xl ${color} border border-border py-4 px-2 hover:border-violet/30 hover:shadow-lg hover:shadow-black/20 transition-all`}>
+    <div className={`text-center rounded-xl ${color} py-4 px-2 hover:shadow-md transition-shadow`}>
       <CountUp value={value} className="text-xl sm:text-2xl font-semibold text-foreground block" />
       <p className="mt-0.5 text-xs sm:text-sm text-muted">{label}</p>
     </div>
