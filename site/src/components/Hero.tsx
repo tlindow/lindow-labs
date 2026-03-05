@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
 
 export default function Hero() {
@@ -13,6 +14,19 @@ export default function Hero() {
       </div>
 
       <div className="max-w-3xl text-center">
+        <div className="mb-6 sm:mb-8 flex justify-center">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
+            <Image
+              src="/profile.png"
+              alt="Tyler Lindow"
+              fill
+              sizes="(max-width: 640px) 128px, 160px"
+              className="object-cover object-[center_20%]"
+              priority
+            />
+          </div>
+        </div>
+
         <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-violet mb-3 sm:mb-4">
           Software Developer &middot; Builder &middot; Mentor
         </p>
