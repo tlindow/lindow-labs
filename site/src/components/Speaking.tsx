@@ -62,9 +62,7 @@ export default function Speaking() {
 
         <div className="mt-8 sm:mt-10">
           <a
-            href="https://www.linkedin.com/in/tlindow"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:tyler.lindow@gmail.com"
             className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline"
           >
             Interested in having me speak? Let&rsquo;s talk

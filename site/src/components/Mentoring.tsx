@@ -64,7 +64,7 @@ export default function Mentoring() {
           </p>
 
           <a
-            href="https://www.linkedin.com/in/tlindow"
+            href="https://calendly.com/tylerlindow/elevate"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-colors"
@@ -109,14 +109,12 @@ export default function Mentoring() {
               Not sure where to start? That&rsquo;s totally fine.
             </p>
             <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
-              Send me a message on LinkedIn and tell me a bit about where
-              you&rsquo;re at. We&rsquo;ll find the right way to work together
-              &mdash; no pressure, just a conversation.
+              Send me a message and tell me a bit about where you&rsquo;re at.
+              We&rsquo;ll find the right way to work together &mdash; no
+              pressure, just a conversation.
             </p>
             <a
-              href="https://www.linkedin.com/in/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:tyler.lindow@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline"
             >
               Send me a message
