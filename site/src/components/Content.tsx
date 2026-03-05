@@ -1,4 +1,8 @@
+"use client";
+
 import { Video, FileText, Rss, ArrowRight } from "lucide-react";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
+import MagneticButton from "@/components/animations/MagneticButton";
 
 const formats = [
   {
@@ -31,53 +35,59 @@ export default function Content() {
   return (
     <section id="content" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="mx-auto max-w-5xl">
-        <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-          Content & Newsletter
-        </h2>
-        <div className="mt-2 h-1 w-16 rounded-full bg-mint" />
+        <ScrollReveal>
+          <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
+            Content & Newsletter
+          </h2>
+          <div className="mt-2 h-1 w-16 rounded-full bg-mint" />
 
-        <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-          I&rsquo;m creating content about software development, creative
-          coding, and the things I&rsquo;m learning. The goal is to build a
-          library of resources that&rsquo;s genuinely useful.
-        </p>
+          <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
+            I&rsquo;m creating content about software development, creative
+            coding, and the things I&rsquo;m learning. The goal is to build a
+            library of resources that&rsquo;s genuinely useful.
+          </p>
+        </ScrollReveal>
 
-        <div className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-3">
+        <StaggerContainer className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-3" staggerDelay={0.12}>
           {formats.map((f) => {
             const Icon = f.icon;
             return (
-              <div key={f.title} className="text-center sm:text-left">
-                <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${f.iconBg} ${f.iconColor}`}>
-                  <Icon size={22} />
+              <StaggerItem key={f.title}>
+                <div className="text-center sm:text-left group">
+                  <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${f.iconBg} ${f.iconColor} transition-transform duration-300 group-hover:scale-110`}>
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
+                    {f.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm text-muted leading-relaxed">
+                    {f.description}
+                  </p>
                 </div>
-                <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
-                  {f.title}
-                </h3>
-                <p className="mt-1.5 text-sm text-muted leading-relaxed">
-                  {f.description}
-                </p>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
 
-        <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
-          <p className="text-base sm:text-lg font-medium text-foreground">
-            Follow along &mdash; I&rsquo;m publishing on LinkedIn first.
-          </p>
-          <p className="mt-2 text-sm text-muted">
-            Videos, write-ups, and honest reflections on the developer journey.
-          </p>
-          <a
-            href="https://www.linkedin.com/in/tlindow"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors"
-          >
-            Follow on LinkedIn
-            <ArrowRight size={14} />
-          </a>
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
+            <p className="text-base sm:text-lg font-medium text-foreground">
+              Follow along &mdash; I&rsquo;m publishing on LinkedIn first.
+            </p>
+            <p className="mt-2 text-sm text-muted">
+              Videos, write-ups, and honest reflections on the developer journey.
+            </p>
+            <MagneticButton
+              href="https://www.linkedin.com/in/tlindow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
+            >
+              Follow on LinkedIn
+              <ArrowRight size={14} />
+            </MagneticButton>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
