@@ -29,7 +29,7 @@ export default function Hero() {
             />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
               <Image
-                src="/profile.png"
+                src="/IMG_0548.jpeg"
                 alt="Tyler Lindow"
                 fill
                 sizes="(max-width: 640px) 128px, 160px"
