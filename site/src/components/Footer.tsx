@@ -23,10 +23,10 @@ const socials = [
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Services", href: "#mentoring" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Content", href: "#content" },
+  { label: "Experiments", href: "#portfolio" },
+  { label: "Themes", href: "#speaking" },
+  { label: "Field Notes", href: "#content" },
+  { label: "Join", href: "#join" },
 ];
 
 export default function Footer() {
@@ -37,10 +37,11 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-12">
             <div>
               <p className="font-display font-semibold text-xl sm:text-2xl text-foreground">
-                Lindow Labs
+                Hapi Labs
               </p>
               <p className="mt-2 text-sm text-muted max-w-xs">
-                Web studio and advisory practice led by Tyler Lindow.
+                Creative technology lab for interactive systems, field notes,
+                and public experiments.
               </p>
               <div className="mt-5 flex gap-3">
                 {socials.map((s) => {
@@ -83,7 +84,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Lindow Labs. Built with Next.js
+            &copy; {new Date().getFullYear()} Hapi Labs. Built with Next.js
             and Tailwind CSS.
           </p>
         </div>

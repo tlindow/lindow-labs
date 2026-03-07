@@ -7,25 +7,25 @@ import MagneticButton from "@/components/animations/MagneticButton";
 const formats = [
   {
     icon: Video,
-    title: "Video Walkthroughs",
+    title: "Studio Dispatches",
     description:
-      "Short-form demos and walkthroughs of projects, tools, and techniques — shared on LinkedIn.",
+      "Short-form demos, process fragments, and glimpses into experiments while they are still forming.",
     iconBg: "bg-rose-light",
     iconColor: "text-rose",
   },
   {
     icon: FileText,
-    title: "Write-Ups",
+    title: "Research Notes",
     description:
-      "Posts about what I'm building, the decisions behind it, and things I wish I'd known sooner.",
+      "Writing about systems, themes, decisions, and questions that deserve a longer trail of thought.",
     iconBg: "bg-sky-light",
     iconColor: "text-sky",
   },
   {
     icon: Rss,
-    title: "Newsletter",
+    title: "Lab Log",
     description:
-      "A regular digest of what I'm learning, links worth reading, and reflections on the developer journey.",
+      "A lightweight record of what is active, what is changing, and what the lab is moving toward next.",
     iconBg: "bg-amber-light",
     iconColor: "text-amber",
   },
@@ -37,14 +37,13 @@ export default function Content() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Content & Newsletter
+            Field Notes
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-mint" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            I&rsquo;m creating content about software development, creative
-            coding, and the things I&rsquo;m learning. The goal is to build a
-            library of resources that&rsquo;s genuinely useful.
+            The public trace of the lab: what is being studied, tested, built,
+            and revised in real time.
           </p>
         </ScrollReveal>
 
@@ -72,10 +71,10 @@ export default function Content() {
         <ScrollReveal delay={0.2}>
           <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg font-medium text-foreground">
-              Follow along &mdash; I&rsquo;m publishing on LinkedIn first.
+              Things are happening here.
             </p>
             <p className="mt-2 text-sm text-muted">
-              Videos, write-ups, and honest reflections on the developer journey.
+              Follow the notes as Hapi Labs becomes more visible in public.
             </p>
             <MagneticButton
               href="https://www.linkedin.com/in/tlindow"
@@ -83,7 +82,7 @@ export default function Content() {
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
             >
-              Follow on LinkedIn
+              Follow the Lab
               <ArrowRight size={14} />
             </MagneticButton>
           </div>

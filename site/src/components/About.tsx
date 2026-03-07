@@ -9,7 +9,7 @@ export default function About() {
       <div className="mx-auto max-w-3xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            About Lindow Labs
+            About Hapi Labs
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-sky" />
         </ScrollReveal>
@@ -17,38 +17,36 @@ export default function About() {
         <ScrollReveal delay={0.15}>
           <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
             <p>
-              Lindow Labs is the home for my work as a web developer, builder,
-              and advisor. It stays personal because I&rsquo;m the one doing the
-              work. I got into software after seeing a museum terminal and
-              realizing I wanted to understand how software actually worked. I
-              went through an immersive coding program, dove into JavaScript and
-              React, and never looked back.
+              Hapi Labs is an emerging creative technology lab shaped by web
+              engineering, playful interaction design, and the feeling of a
+              studio where new ideas are actively being tested. The aim is not
+              simply to market services, but to create a place where systems,
+              tools, and experiences can be explored in public.
             </p>
             <p>
-              Today I&rsquo;m especially interested in helping people get clear
-              on what matters most. Sometimes that means designing and building
-              a website. Sometimes it means sorting through technical decisions,
-              reviewing delivery risk, or helping a team focus on the P0s that
-              actually move the business forward.
+              The reference points are closer to media labs, exhibit studios,
+              and research groups than a traditional agency. Websites are still
+              part of the practice, but only as one output among more expansive
+              creative projects, interactive systems, and learning environments.
             </p>
             <p>
-              I keep thinking about Lindow Labs as part studio, part career lab,
-              and part practical incubator for people who want thoughtful
-              execution without the noise. The goal is simple: build useful
-              things, create clarity, and help good work compound over time.
+              Right now the lab is early and alive: publishing field notes,
+              building experiments, and sketching toward programs that feel more
+              like apprenticeship, shared study, and public inquiry than
+              packaged services.
             </p>
           </div>
         </ScrollReveal>
 
         <StaggerContainer className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8" staggerDelay={0.15}>
           <StaggerItem>
-            <Stat label="Services" value="Web + Advisory" color="bg-rose-light" />
+            <Stat label="Mode" value="Studio x Lab" color="bg-rose-light" />
           </StaggerItem>
           <StaggerItem>
-            <Stat label="Primary Stack" value="React / TS" color="bg-sky-light" />
+            <Stat label="Output" value="Experiments" color="bg-sky-light" />
           </StaggerItem>
           <StaggerItem>
-            <Stat label="Operating Style" value="P0 First" color="bg-mint-light" />
+            <Stat label="Status" value="In Motion" color="bg-mint-light" />
           </StaggerItem>
         </StaggerContainer>
       </div>

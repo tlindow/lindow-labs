@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Code2,
   Compass,
@@ -12,37 +11,38 @@ import {
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
 import MagneticButton from "@/components/animations/MagneticButton";
+import LabGlyph from "@/components/LabGlyph";
 
 const offerings = [
   {
     icon: Code2,
-    title: "Website Strategy & Builds",
+    title: "Research Collaborations",
     description:
-      "Design and ship polished marketing sites and web experiences that communicate clearly and support real business goals.",
+      "Partner on creative technology, cultural ideas, or product questions that deserve more exploration than a standard client brief.",
     color: "bg-sky-light",
     iconColor: "text-sky",
   },
   {
     icon: Compass,
-    title: "P0 Planning & Delivery Support",
+    title: "Interactive Commissions",
     description:
-      "Get clarity on the highest-priority work, reduce thrash, and turn urgent asks into a plan your team can actually execute.",
+      "Build web experiences, playful systems, and digital artifacts that feel closer to an exhibit or prototype than a brochure site.",
     color: "bg-peach-light",
     iconColor: "text-peach",
   },
   {
     icon: FolderOpen,
-    title: "Technical Reviews & Pairing",
+    title: "Apprenticeship Track",
     description:
-      "Work through implementation details, delivery risk, and architecture trade-offs with a practical second set of eyes.",
+      "A future pathway for builders who want to learn through real projects, close reading, and shared study inside an active lab.",
     color: "bg-mint-light",
     iconColor: "text-mint",
   },
   {
     icon: MessageCircle,
-    title: "Career & Leadership Coaching",
+    title: "Lab Circle",
     description:
-      "Talk through growth, communication, and the next move when you want someone who understands both the work and the people side.",
+      "An early group forming around notes, critiques, demos, and the kind of conversations that push ambitious work forward.",
     color: "bg-violet-light",
     iconColor: "text-violet",
   },
@@ -50,7 +50,7 @@ const offerings = [
 
 export default function Mentoring() {
   return (
-    <section id="mentoring" className="relative overflow-hidden">
+    <section id="join" className="relative overflow-hidden">
       {/* Pastel violet banner */}
       <div className="relative bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
         {/* Animated gradient overlay */}
@@ -62,51 +62,36 @@ export default function Mentoring() {
 
         <div className="relative mx-auto max-w-4xl text-center">
           <ScrollReveal direction="none">
-            <div className="mb-6 flex justify-center sm:mb-8">
-              <div className="relative group">
-                <motion.div
-                  className="absolute -inset-3 rounded-full bg-gradient-to-br from-white/30 via-white/15 to-sky/20 blur-xl"
-                  animate={{ scale: [1, 1.06, 1], opacity: [0.45, 0.7, 0.45] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                />
-                <div className="relative h-28 w-28 overflow-hidden rounded-full ring-4 ring-white/20 ring-offset-4 ring-offset-violet shadow-lg sm:h-36 sm:w-36">
-                  <Image
-                    src="/IMG_0548.jpeg"
-                    alt="Tyler Lindow"
-                    fill
-                    sizes="(max-width: 640px) 112px, 144px"
-                    className="object-cover object-[center_20%]"
-                    priority
-                  />
-                </div>
-              </div>
+            <div className="mx-auto mb-6 max-w-sm sm:mb-8">
+              <LabGlyph
+                className="h-[220px] sm:h-[260px]"
+                labels={["cohort", "signals", "programs"]}
+              />
             </div>
 
             <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/15">
                 <Sparkles size={12} className="shrink-0 text-white" />
               </span>
-              Now booking career elevation sessions
+              An early cohort is forming
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
-              Work With Lindow Labs
+              Join Hapi Labs
             </h2>
 
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
-              Need a polished website, sharper technical direction, or a trusted
-              thought partner for the highest-priority work on your plate? I help
-              founders, teams, and individual operators stay clear on the P0s and
-              move them forward.
+              Hapi Labs is taking shape as a space for creative projects,
+              research prompts, apprenticeship, and people who want to make
+              ambitious things in public. If that sounds like your kind of room,
+              reach out.
             </p>
 
             <MagneticButton
-              href="https://calendly.com/tylerlindow/elevate"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:tyler.lindow@gmail.com?subject=Hapi%20Labs"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-all hover:shadow-xl hover:shadow-white/20"
             >
-              Book a Career Elevation Session
+              Start a Conversation
               <ArrowRight size={15} />
             </MagneticButton>
           </ScrollReveal>
@@ -118,7 +103,7 @@ export default function Mentoring() {
         <div className="mx-auto max-w-5xl">
           <ScrollReveal>
             <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
-              How Lindow Labs can help
+              Ways to step into the lab
             </p>
           </ScrollReveal>
 
@@ -146,18 +131,18 @@ export default function Mentoring() {
           <ScrollReveal delay={0.2}>
             <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
               <p className="text-base sm:text-lg font-medium text-foreground">
-                Need a sounding board before you commit to a direction?
+                No polished program deck yet. Just momentum.
               </p>
               <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
-                Send me a note with what feels most urgent right now. We can
-                figure out whether you need a website partner, technical
-                advisory, or simply a focused conversation.
+                This is an invitation to people who care about interactive
+                systems, public learning, and larger creative technology work.
+                If the direction resonates, send a note and say hello.
               </p>
               <a
                 href="mailto:tyler.lindow@gmail.com"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
               >
-                Send me a message
+                Reach out to join the conversation
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </a>
             </div>

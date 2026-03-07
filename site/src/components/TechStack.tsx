@@ -4,8 +4,8 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 
 const stackGroups = [
   {
-    title: "Web engineering",
-    description: "Core technologies I use to design, build, and ship products on the web.",
+    title: "Creative systems",
+    description: "Core technologies used to design, build, and ship interactive products and digital experiences.",
     items: [
       { name: "TypeScript", bg: "bg-sky-light", dot: "bg-sky" },
       { name: "JavaScript", bg: "bg-amber-light", dot: "bg-amber" },
@@ -22,8 +22,8 @@ const stackGroups = [
     ],
   },
   {
-    title: "Enterprise tooling",
-    description: "Platforms I use to coordinate delivery, monitor systems, and support teams in production.",
+    title: "Operational tooling",
+    description: "Platforms that support delivery, observability, incident response, and the real work around production systems.",
     items: [
       { name: "Buildkite", bg: "bg-mint-light", dot: "bg-mint" },
       { name: "Snowflake", bg: "bg-sky-light", dot: "bg-sky" },
@@ -42,13 +42,14 @@ export default function TechStack() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Tech & Tools
+            Capabilities & Infrastructure
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-amber" />
           <p className="mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-muted">
-            Lindow Labs spans both modern product engineering and the enterprise
-            tooling that keeps delivery, observability, and incident response
-            moving.
+            Hapi Labs spans modern product engineering, creative systems, and
+            the operational tooling that keeps ambitious work moving. The stack
+            is not the point by itself; it matters because it helps ideas become
+            durable, observable, and ready for real people.
           </p>
         </ScrollReveal>
 
@@ -80,6 +81,14 @@ export default function TechStack() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.25}>
+          <div className="mt-6 rounded-2xl border border-border bg-surface p-5 text-sm leading-relaxed text-muted sm:p-6">
+            Infrastructure matters when an experiment needs to survive contact
+            with real users, evolving requirements, and the messy edges of
+            production.
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

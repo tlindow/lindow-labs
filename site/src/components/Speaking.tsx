@@ -5,27 +5,27 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 
 const topics = [
   {
-    title: "Building in Public",
+    title: "Interactive Worlds",
     description:
-      "Lessons from learning, failing, and shipping — the honest version of the developer journey.",
+      "Playful systems, exhibit thinking, and web experiences that invite participation instead of passive scrolling.",
     bg: "bg-rose-light",
   },
   {
-    title: "Creative Coding",
+    title: "Creative Technology",
     description:
-      "Using code as a medium for art, storytelling, and interactive experiences.",
+      "Using code as a medium for visual systems, storytelling, and interfaces that feel alive.",
     bg: "bg-amber-light",
   },
   {
-    title: "Career Transitions",
+    title: "Applied AI Literacy",
     description:
-      "Navigating the path into software development from a non-traditional background.",
+      "Learning how AI fits into real creative and technical practice without pretending certainty where there is still study to do.",
     bg: "bg-sky-light",
   },
   {
-    title: "Developer Tooling & Workflow",
+    title: "Apprenticeship and Learning",
     description:
-      "What makes teams productive and developers happy — tools, habits, and culture.",
+      "Exploring how shared study, real projects, and generous critique can form better pathways into meaningful work.",
     bg: "bg-mint-light",
   },
 ];
@@ -38,14 +38,14 @@ export default function Speaking() {
           <div className="flex items-center gap-3">
             <Mic size={24} className="text-rose sm:w-7 sm:h-7" />
             <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-              Speaking
+              Research Themes
             </h2>
           </div>
           <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-rose" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            I&rsquo;m building toward sharing ideas on stage and in virtual
-            events. Here are topics I&rsquo;m excited to talk about.
+            Areas of inquiry shaping the lab right now. These themes inform the
+            experiments, writing, and future programs.
           </p>
         </ScrollReveal>
 
@@ -72,7 +72,7 @@ export default function Speaking() {
               href="mailto:tyler.lindow@gmail.com"
               className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
             >
-              Interested in having me speak? Let&rsquo;s talk
+              Want to build around one of these themes? Let&rsquo;s talk
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>

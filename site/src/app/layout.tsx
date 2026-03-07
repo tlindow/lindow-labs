@@ -16,13 +16,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lindow Labs — Web Development and Technical Advisory",
+  title: "Hapi Labs — Creative Technology Lab",
   description:
-    "Lindow Labs is Tyler Lindow's web studio and advisory practice for polished websites, technical clarity, and P0-focused execution.",
+    "Hapi Labs is an emerging creative technology lab for interactive systems, public experiments, field notes, and larger creative projects.",
   openGraph: {
-    title: "Lindow Labs — Web Development and Technical Advisory",
+    title: "Hapi Labs — Creative Technology Lab",
     description:
-      "Polished websites, technical clarity, and P0-focused execution from Tyler Lindow and Lindow Labs.",
+      "An emerging creative technology lab exploring interactive systems, field notes, and public experiments.",
     type: "website",
   },
 };

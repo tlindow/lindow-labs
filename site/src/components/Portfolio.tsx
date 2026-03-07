@@ -6,7 +6,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 const projects = [
   {
     title: "Dreaming with Marisól",
-    description: "My wife's business website.",
+    description: "Brand-forward website for a healing arts practice.",
     tech: ["TypeScript"],
     url: "https://github.com/tlindow/dreamingwithmarisol",
     accent: "group-hover:border-rose/40",
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     title: "Greywater Projection",
-    description: "Data visualization and projection tool.",
+    description: "Data visualization and projection study for a larger spatial idea.",
     tech: ["JavaScript", "D3"],
     url: "https://github.com/tlindow/greywater_projection",
     accent: "group-hover:border-indigo/40",
@@ -68,11 +68,14 @@ export default function Portfolio() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Portfolio
+            Selected Experiments
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-peach" />
           <p className="mt-3 sm:mt-4 text-muted text-[15px] sm:text-lg max-w-xl">
-            A selection of projects I&rsquo;ve built. More on{" "}
+            A growing archive of prototypes, interfaces, and creative systems.
+            These are less polished case studies and more evidence of a practice
+            moving across visual systems, playful interaction, and working web
+            software. More on{" "}
             <a
               href="https://github.com/tlindow?tab=repositories"
               target="_blank"
@@ -122,6 +125,14 @@ export default function Portfolio() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <ScrollReveal delay={0.2}>
+          <div className="mt-8 rounded-2xl border border-border bg-surface-alt p-5 text-sm leading-relaxed text-muted sm:mt-10 sm:p-6">
+            The through-line is curiosity: interfaces that explain themselves,
+            systems that invite interaction, and experiments that can grow into
+            something larger.
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
