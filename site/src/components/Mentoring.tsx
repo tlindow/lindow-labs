@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Code2,
   Compass,
@@ -61,11 +62,31 @@ export default function Mentoring() {
 
         <div className="relative mx-auto max-w-4xl text-center">
           <ScrollReveal direction="none">
+            <div className="mb-6 flex justify-center sm:mb-8">
+              <div className="relative group">
+                <motion.div
+                  className="absolute -inset-3 rounded-full bg-gradient-to-br from-white/30 via-white/15 to-sky/20 blur-xl"
+                  animate={{ scale: [1, 1.06, 1], opacity: [0.45, 0.7, 0.45] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <div className="relative h-28 w-28 overflow-hidden rounded-full ring-4 ring-white/20 ring-offset-4 ring-offset-violet shadow-lg sm:h-36 sm:w-36">
+                  <Image
+                    src="/IMG_0548.jpeg"
+                    alt="Tyler Lindow"
+                    fill
+                    sizes="(max-width: 640px) 112px, 144px"
+                    className="object-cover object-[center_20%]"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/15">
                 <Sparkles size={12} className="shrink-0 text-white" />
               </span>
-              Now booking 1:1 sessions
+              Now booking career elevation sessions
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
@@ -85,7 +106,7 @@ export default function Mentoring() {
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-all hover:shadow-xl hover:shadow-white/20"
             >
-              Book a Strategy Session
+              Book a Career Elevation Session
               <ArrowRight size={15} />
             </MagneticButton>
           </ScrollReveal>

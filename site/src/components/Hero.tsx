@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
@@ -15,31 +14,6 @@ export default function Hero() {
       <GradientBeam />
 
       <div className="max-w-3xl text-center">
-        <motion.div
-          className="mb-6 sm:mb-8 flex justify-center"
-          initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-        >
-          <div className="relative group">
-            <motion.div
-              className="absolute -inset-3 rounded-full bg-gradient-to-br from-violet/30 via-indigo/20 to-sky/30 blur-xl"
-              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
-              <Image
-                src="/IMG_0548.jpeg"
-                alt="Tyler Lindow"
-                fill
-                sizes="(max-width: 640px) 128px, 160px"
-                className="object-cover object-[center_20%]"
-                priority
-              />
-            </div>
-          </div>
-        </motion.div>
-
         <motion.p
           className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-violet mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 10 }}
