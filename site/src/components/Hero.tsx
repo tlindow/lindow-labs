@@ -46,11 +46,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Software Developer &middot; Builder &middot; Mentor
+          Web development &middot; Product clarity &middot; Technical advisory
         </motion.p>
 
         <AnimatedText
-          text="Hey, I'm Tyler."
+          text="Lindow Labs"
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
@@ -62,8 +62,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
         >
-          I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
+          Led by Tyler Lindow, I build polished websites, help teams stay clear
+          on their P0s, and bring a practical engineering lens to the business
+          goals behind the work. Based in San Diego.
         </motion.p>
 
         <motion.div
@@ -76,7 +77,7 @@ export default function Hero() {
             href="#mentoring"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
           >
-            Work With Me
+            See Services
           </MagneticButton>
           <div className="flex gap-3 w-full sm:w-auto">
             <MagneticButton

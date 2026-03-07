@@ -9,7 +9,7 @@ export default function About() {
       <div className="mx-auto max-w-3xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            About Me
+            About Lindow Labs
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-sky" />
         </ScrollReveal>
@@ -17,41 +17,38 @@ export default function About() {
         <ScrollReveal delay={0.15}>
           <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
             <p>
-              I got into software development because I realized I had no idea how
-              software worked. At the time I was doing research at the Field
-              Museum in Chicago when I saw someone pull up a terminal and open an
-              application that visitors would interact with. I went through an
-              immersive coding program, dove into JavaScript and React, and never
-              looked back. Building for the web scratches every itch I have
-              &mdash; problem-solving, design, creativity, and the instant feedback
-              of seeing something come to life in a browser.
+              Lindow Labs is the home for my work as a web developer, builder,
+              and advisor. It stays personal because I&rsquo;m the one doing the
+              work. I got into software after seeing a museum terminal and
+              realizing I wanted to understand how software actually worked. I
+              went through an immersive coding program, dove into JavaScript and
+              React, and never looked back.
             </p>
             <p>
-              I&rsquo;m drawn to projects at the intersection of technology and
-              creativity &mdash; whether that&rsquo;s an interactive booking
-              system, a generative art sketch, or a tool that makes
-              someone&rsquo;s workflow easier. I&rsquo;m passionate about AI in
-              software and always looking to learn more about what people are
-              building.
+              Today I&rsquo;m especially interested in helping people get clear
+              on what matters most. Sometimes that means designing and building
+              a website. Sometimes it means sorting through technical decisions,
+              reviewing delivery risk, or helping a team focus on the P0s that
+              actually move the business forward.
             </p>
             <p>
-              Outside of code, I&rsquo;m curious about storytelling, design,
-              and how technology brings people together. Right now I&rsquo;m
-              focused on building in public, mentoring other developers, and
-              creating content.
+              I keep thinking about Lindow Labs as part studio, part career lab,
+              and part practical incubator for people who want thoughtful
+              execution without the noise. The goal is simple: build useful
+              things, create clarity, and help good work compound over time.
             </p>
           </div>
         </ScrollReveal>
 
         <StaggerContainer className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8" staggerDelay={0.15}>
           <StaggerItem>
-            <Stat label="GitHub Repos" value="45+" color="bg-rose-light" />
+            <Stat label="Services" value="Web + Advisory" color="bg-rose-light" />
           </StaggerItem>
           <StaggerItem>
             <Stat label="Primary Stack" value="React / TS" color="bg-sky-light" />
           </StaggerItem>
           <StaggerItem>
-            <Stat label="Focus" value="Mentoring" color="bg-mint-light" />
+            <Stat label="Operating Style" value="P0 First" color="bg-mint-light" />
           </StaggerItem>
         </StaggerContainer>
       </div>

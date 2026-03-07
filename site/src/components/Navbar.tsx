@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Work With Me", href: "#mentoring" },
+  { label: "Services", href: "#mentoring" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Speaking", href: "#speaking" },
   { label: "Content", href: "#content" },
@@ -26,7 +26,7 @@ export default function Navbar() {
             href="#"
             className="font-display font-semibold text-lg sm:text-xl tracking-tight text-foreground"
           >
-            Tyler Lindow
+            Lindow Labs
           </a>
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">

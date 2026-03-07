@@ -23,7 +23,7 @@ const socials = [
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Work With Me", href: "#mentoring" },
+  { label: "Services", href: "#mentoring" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Speaking", href: "#speaking" },
   { label: "Content", href: "#content" },
@@ -37,10 +37,10 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-12">
             <div>
               <p className="font-display font-semibold text-xl sm:text-2xl text-foreground">
-                Tyler Lindow
+                Lindow Labs
               </p>
               <p className="mt-2 text-sm text-muted max-w-xs">
-                Developer, builder, mentor. Always open to a good conversation.
+                Web studio and advisory practice led by Tyler Lindow.
               </p>
               <div className="mt-5 flex gap-3">
                 {socials.map((s) => {
@@ -83,7 +83,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Tyler Lindow. Built with Next.js
+            &copy; {new Date().getFullYear()} Lindow Labs. Built with Next.js
             and Tailwind CSS.
           </p>
         </div>
