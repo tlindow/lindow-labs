@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 const links = [
   { label: "Why", href: "/#why" },
   { label: "Workflow", href: "/#workflow" },
-  { label: "Tutorial", href: "/tutorials/agent-evals-hello-world" },
+  { label: "Tutorial", href: "/#tutorial" },
   { label: "Loops", href: "/#loops" },
   { label: "Join", href: "/#join" },
   { label: "Connect", href: "/#connect" },

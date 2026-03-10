@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { Video, FileText, Rss, ArrowRight } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
-import MagneticButton from "@/components/animations/MagneticButton";
 
 const formats = [
   {
@@ -23,9 +23,9 @@ const formats = [
   },
   {
     icon: Rss,
-    title: "Operator notes",
+    title: "Genuine media",
     description:
-      "Short practical notes for support, solutions, and post-sales engineers who want a stronger operating model for AI tools.",
+      "Short clips, podcast snippets, and practical notes that show the thinking in action instead of flattening everything into generic website copy.",
     iconBg: "bg-amber-light",
     iconColor: "text-amber",
   },
@@ -72,19 +72,20 @@ export default function Content() {
         <ScrollReveal delay={0.2}>
           <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg font-medium text-foreground">
-              Want to shape what comes next?
+              More genuine media is coming here.
             </p>
             <p className="mt-2 text-sm text-muted">
-              Reach out if you want more tutorials, workflow teardowns, or a
-              community focused on optimizing AI tools after they are deployed.
+              For now, the clearest way in is the walkthrough clip and the inline
+              tutorial. Next up can be podcast clips, teardown snippets, and
+              operator notes that feel more alive than another wall of text.
             </p>
-            <MagneticButton
-              href="mailto:tyler.lindow@gmail.com?subject=After%20the%20Demo"
+            <Link
+              href="/#tutorial"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
             >
-              Join by Email
+              Jump to the inline tutorial
               <ArrowRight size={14} />
-            </MagneticButton>
+            </Link>
           </div>
         </ScrollReveal>
       </div>

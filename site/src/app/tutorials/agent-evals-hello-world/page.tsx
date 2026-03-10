@@ -11,70 +11,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const workflowCards = [
-  {
-    title: "1. Gather context",
-    description:
-      "Treat support as a research problem. Pull together the ticket, logs, account context, known issues, and the runbook before you decide anything.",
-  },
-  {
-    title: "2. Locate the failure",
-    description:
-      "Classify the failure point cleanly: client, auth, API, dependency, or unknown if you still need more evidence.",
-  },
-  {
-    title: "3. Decide the disposition",
-    description:
-      "Figure out whether the report matches a known issue, expected behavior, a real bug, or a needs-more-info response.",
-  },
-  {
-    title: "4. Close the loop",
-    description:
-      "Draft a customer-safe reply, escalate only when it is warranted, and turn repeated cases into evals, docs updates, or better prompts.",
-  },
-];
-
-const projectFiles = [
-  {
-    path: "fixtures/scenarios.json",
-    description: "Four support tickets plus the expected outcomes you want the agent to hit.",
-  },
-  {
-    path: "prompts/support-investigator.md",
-    description: "A reusable instruction template for Cursor, Claude Code, or a similar development agent.",
-  },
-  {
-    path: "runs/baseline/",
-    description: "Intentionally rough investigation artifacts that fail multiple deterministic checks.",
-  },
-  {
-    path: "runs/improved/",
-    description: "Cleaner artifacts that pass the same benchmark and demonstrate the target behavior.",
-  },
-  {
-    path: "scripts/eval-runs.mjs",
-    description: "A tiny Node-based eval harness that scores the runs and makes regressions obvious.",
-  },
-];
-
-const quickStart = `cd examples/agent-evals-hello-world
-npm run eval:baseline
-npm run eval:improved`;
-
-const agentPrompt = `Read examples/agent-evals-hello-world/fixtures/scenarios.json and
-examples/agent-evals-hello-world/prompts/support-investigator.md.
-
-Generate a support investigation artifact for the scenario with id
-"repo-index-timeout". Save it as
-examples/agent-evals-hello-world/runs/manual/repo-index-timeout.json.
-
-Follow the required JSON shape exactly. Be explicit about the failure point,
-include evidence entries, keep the customer reply safe for external use, and
-only include bug_report if the disposition is "bug".`;
-
-const scoreManualRun = `mkdir -p runs/manual
-npm run eval -- runs/manual`;
+import {
+  tutorialAgentPrompt,
+  tutorialProjectFiles,
+  tutorialQuickStart,
+  tutorialScoreManualRun,
+  tutorialWorkflowCards,
+} from "@/content/agentEvalsTutorial";
 
 export const metadata: Metadata = {
   title: "After the Demo — Hello World Agent Evals Tutorial",
@@ -147,7 +90,7 @@ export default function AgentEvalsHelloWorldPage() {
             />
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {workflowCards.map((card) => (
+              {tutorialWorkflowCards.map((card) => (
                 <div
                   key={card.title}
                   className="rounded-2xl border border-border bg-surface p-5 sm:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
@@ -173,7 +116,7 @@ export default function AgentEvalsHelloWorldPage() {
             />
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {projectFiles.map((item) => (
+              {tutorialProjectFiles.map((item) => (
                 <div
                   key={item.path}
                   className="rounded-2xl border border-border bg-surface p-5 sm:p-6"
@@ -204,7 +147,7 @@ export default function AgentEvalsHelloWorldPage() {
                 number="01"
                 title="Start by seeing the benchmark work"
                 description="Run the intentionally rough baseline and the passing improved examples. This gives you a feel for what the eval harness actually checks."
-                code={quickStart}
+                code={tutorialQuickStart}
               />
 
               <StepBlock
@@ -217,14 +160,14 @@ export default function AgentEvalsHelloWorldPage() {
                 number="03"
                 title="Ask your agent to generate one manual run"
                 description="Use a single scenario, such as `repo-index-timeout`, and have the agent save the result into `runs/manual/`. This keeps the run comparable to the baseline and improved examples."
-                code={agentPrompt}
+                code={tutorialAgentPrompt}
               />
 
               <StepBlock
                 number="04"
                 title="Score the manual run"
                 description="Run the same harness against your manual artifact. The checks tell you whether the agent found the right failure point, cited the right sources, used safe customer-facing language, and escalated only when it should."
-                code={scoreManualRun}
+                code={tutorialScoreManualRun}
               />
 
               <StepBlock
@@ -260,10 +203,10 @@ export default function AgentEvalsHelloWorldPage() {
                   Back to After the Demo
                 </Link>
                 <Link
-                  href="mailto:tyler.lindow@gmail.com?subject=After%20the%20Demo%20Tutorial"
+                  href="/#tutorial"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-6 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
                 >
-                  Suggest the next tutorial
+                  See the inline version
                 </Link>
               </div>
             </div>

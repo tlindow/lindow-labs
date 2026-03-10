@@ -1,31 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Github, Mail } from "lucide-react";
 import ScrollReveal from "@/components/animations/ScrollReveal";
-
-const socials = [
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/tlindow",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/tlindow",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:tyler.lindow@gmail.com",
-  },
-];
 
 const navLinks = [
   { label: "Why", href: "/#why" },
   { label: "Workflow", href: "/#workflow" },
-  { label: "Tutorial", href: "/tutorials/agent-evals-hello-world" },
+  { label: "Tutorial", href: "/#tutorial" },
   { label: "Loops", href: "/#loops" },
   { label: "Join", href: "/#join" },
 ];
@@ -44,23 +25,10 @@ export default function Footer() {
                 Playbooks and tutorials for optimizing AI tools after they are
                 deployed into real customer workflows.
               </p>
-              <div className="mt-5 flex gap-3">
-                {socials.map((s) => {
-                  const Icon = s.icon;
-                  return (
-                    <a
-                      key={s.label}
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={s.label}
-                      className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-border text-muted hover:text-violet hover:border-violet/30 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
-                    >
-                      <Icon size={16} />
-                    </a>
-                  );
-                })}
-              </div>
+              <p className="mt-5 text-sm text-muted max-w-sm">
+                Real walkthroughs, genuine notes, and inline tutorials matter
+                more here than another synthetic landing page.
+              </p>
             </div>
 
             <div>

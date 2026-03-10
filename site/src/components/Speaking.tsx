@@ -1,33 +1,19 @@
 "use client";
 
-import { Mic, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, FileCode2, PlayCircle } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
+import {
+  inlineTutorialSteps,
+  tutorialProjectFiles,
+} from "@/content/agentEvalsTutorial";
 
-const topics = [
-  {
-    title: "Read the support scenarios",
-    description:
-      "Start with four small tickets that cover a known issue, expected behavior, a real bug, and a needs-more-info case.",
-    bg: "bg-rose-light",
-  },
-  {
-    title: "Ask your agent for a run artifact",
-    description:
-      "Use Cursor, Claude Code, or a similar tool to generate a structured support investigation rather than an unscored blob of chat.",
-    bg: "bg-amber-light",
-  },
-  {
-    title: "Score the run deterministically",
-    description:
-      "Check the artifact for failure-point accuracy, evidence quality, safe reply language, follow-up questions, and escalation behavior.",
-    bg: "bg-sky-light",
-  },
-  {
-    title: "Tighten the prompt and repeat",
-    description:
-      "Use the failing checks as feedback, then improve the prompt or schema until the run passes the same benchmark consistently.",
-    bg: "bg-mint-light",
-  },
+const highlights = [
+  "Support-flavored benchmark",
+  "Real walkthrough clip",
+  "Code blocks inline",
+  "No repo hopping required",
 ];
 
 export default function Speaking() {
@@ -36,46 +22,107 @@ export default function Speaking() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <div className="flex items-center gap-3">
-            <Mic size={24} className="text-rose sm:w-7 sm:h-7" />
+            <PlayCircle size={24} className="text-rose sm:w-7 sm:h-7" />
             <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-              Public tutorial
+              Inline tutorial
             </h2>
           </div>
           <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-rose" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            The first tutorial on the site is a small hello-world project for
-            agent evals. It assumes you already use Cursor or Claude Code in daily
-            troubleshooting and want a concrete way to score improvements.
+            You should be able to understand the loop without leaving the page.
+            This section shows the same hello-world agent eval project in a more
+            visual, inline way, then links out to the full tutorial page if you
+            want the longer walkthrough.
           </p>
         </ScrollReveal>
 
-        <StaggerContainer className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2" staggerDelay={0.1}>
-          {topics.map((t) => (
-            <StaggerItem key={t.title}>
-              <div
-                className={`rounded-2xl ${t.bg} p-5 sm:p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5`}
-              >
-                <h3 className="text-base sm:text-lg font-semibold text-foreground">
-                  {t.title}
-                </h3>
-                <p className="mt-1.5 text-sm text-muted leading-relaxed">
-                  {t.description}
-                </p>
+        <div className="mt-8 sm:mt-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <ScrollReveal>
+            <div className="rounded-3xl border border-border bg-surface p-5 sm:p-6">
+              <div className="flex flex-wrap gap-2">
+                {highlights.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-surface-alt px-3 py-1 text-xs font-medium text-muted"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+
+              <div className="mt-5 overflow-hidden rounded-[1.5rem] border border-border">
+                <Image
+                  src="/media/after-the-demo-tutorial-steps.webp"
+                  alt="Inline tutorial code steps"
+                  width={1280}
+                  height={800}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {tutorialProjectFiles.slice(0, 4).map((item) => (
+                  <div
+                    key={item.path}
+                    className="rounded-2xl border border-border bg-surface-alt p-4"
+                  >
+                    <div className="inline-flex items-center gap-2 text-sm font-medium text-violet">
+                      <FileCode2 size={15} />
+                      <code>{item.path}</code>
+                    </div>
+                    <p className="mt-2 text-sm text-muted leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <StaggerContainer className="grid gap-4" staggerDelay={0.08}>
+            {inlineTutorialSteps.map((step, index) => (
+              <StaggerItem key={step.number}>
+                <div
+                  className={`rounded-3xl border border-border bg-surface p-5 sm:p-6 ${
+                    index === 0
+                      ? "shadow-lg shadow-violet/5"
+                      : ""
+                  }`}
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet">
+                    Step {step.number}
+                  </p>
+                  <h3 className="mt-3 text-lg sm:text-xl font-semibold text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {step.description}
+                  </p>
+                  <pre className="mt-4 overflow-x-auto rounded-2xl bg-foreground px-4 py-4 text-sm leading-relaxed text-background">
+                    <code>{step.code}</code>
+                  </pre>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
 
         <ScrollReveal delay={0.3}>
-          <div className="mt-8 sm:mt-10">
-            <a
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3">
+            <Link
               href="/tutorials/agent-evals-hello-world"
-              className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
             >
-              Open the hello world tutorial
-              <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-            </a>
+              Open the full tutorial page
+              <ArrowRight size={14} />
+            </Link>
+            <Link
+              href="/media/after-the-demo-walkthrough.mp4"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-6 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
+            >
+              Watch the clip directly
+            </Link>
           </div>
         </ScrollReveal>
       </div>
