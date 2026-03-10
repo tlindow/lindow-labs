@@ -1,0 +1,27 @@
+{
+  "ticket_id": "repo-index-timeout",
+  "summary": "Repository indexing is timing out on a large workspace and appears to be a new issue that may require an engineering fix.",
+  "failure_point": "api",
+  "disposition": "bug",
+  "confidence": 0.81,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer reports repeated indexing failures on the same monorepo."
+    },
+    {
+      "source": "logs",
+      "note": "The logs mention a timeout while indexing the repository."
+    },
+    {
+      "source": "runbook",
+      "note": "The runbook says to escalate when indexing repeatedly times out."
+    }
+  ],
+  "customer_reply": "We are investigating the indexing issue now. Datadog shows a timeout, so please retry later or use a smaller repo for now.",
+  "follow_up_questions": [],
+  "bug_report": {
+    "title": "Repository indexing timeout",
+    "body": "Customer is blocked by an indexing timeout. Please inspect the indexing service soon."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "ticket_id": "missing-request-id",
+  "summary": "The customer saw a brief error but the report does not include enough information to reproduce or isolate the failure.",
+  "failure_point": "unknown",
+  "disposition": "needs_more_info",
+  "confidence": 0.49,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer did not capture the message or the timing."
+    }
+  ],
+  "customer_reply": "I could not determine what happened from the current report. Please send any details you have.",
+  "follow_up_questions": [],
+  "bug_report": null
+}

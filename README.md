@@ -10,6 +10,10 @@ I build things for the web and love sharing what I learn along the way. This rep
 
 The `site/` directory contains a full Next.js application — my personal website with sections for portfolio, speaking, mentoring, content, and more.
 
+## Examples
+
+- `examples/agent-evals-hello-world/` — a small support-flavored agent evals tutorial for people using Cursor, Claude Code, or similar tools in daily development and troubleshooting.
+
 ### Quick Start
 
 ```bash

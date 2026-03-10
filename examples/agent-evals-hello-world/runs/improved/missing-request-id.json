@@ -1,0 +1,19 @@
+{
+  "ticket_id": "missing-request-id",
+  "summary": "The report does not contain enough detail to identify the failure point, reproduce the issue, or correlate logs. The safest next step is to ask for a request ID, a screenshot, and any timing or reproduction detail before escalating.",
+  "failure_point": "unknown",
+  "disposition": "needs_more_info",
+  "confidence": 0.88,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer did not save the error text, timestamp, or any reproduction details."
+    }
+  ],
+  "customer_reply": "I do not have enough detail yet to tell what happened. Could you send a screenshot of the error if it appears again, plus the exact time and any request id you see? If you can also share the steps you were taking right before the issue, that will help narrow it down quickly.",
+  "follow_up_questions": [
+    "Could you send a screenshot of the error if it appears again?",
+    "Could you share the exact time and any request id you see?"
+  ],
+  "bug_report": null
+}

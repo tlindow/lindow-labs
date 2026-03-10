@@ -1,0 +1,10 @@
+{
+  "name": "agent-evals-hello-world",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "eval": "node scripts/eval-runs.mjs",
+    "eval:baseline": "node scripts/eval-runs.mjs runs/baseline",
+    "eval:improved": "node scripts/eval-runs.mjs runs/improved"
+  }
+}

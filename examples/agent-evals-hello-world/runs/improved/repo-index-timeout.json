@@ -1,0 +1,27 @@
+{
+  "ticket_id": "repo-index-timeout",
+  "summary": "The customer can reliably reproduce repository indexing failures on a large monorepo, and the logs show the request timing out at the API edge while waiting on the indexing job. Because the runbook says repeated timeouts without a known issue should be escalated, this should be treated as a bug.",
+  "failure_point": "api",
+  "disposition": "bug",
+  "confidence": 0.95,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer reports repeated timeouts on the same large monorepo and notes that onboarding is blocked."
+    },
+    {
+      "source": "logs",
+      "note": "The logs include request req_9da21 timing out at the API edge after 181 seconds while the indexing job was pending."
+    },
+    {
+      "source": "runbook",
+      "note": "The runbook says to gather the request ID, confirm reproducibility, and escalate when indexing repeatedly times out without a known issue."
+    }
+  ],
+  "customer_reply": "Thanks for the detailed report. We are investigating this indexing failure now. In the meantime, please retry once more and, if possible, use a smaller workspace or subset of the repo as a temporary workaround while we review the timeout behavior.",
+  "follow_up_questions": [],
+  "bug_report": {
+    "title": "Index timeout at API edge during large repository indexing",
+    "body": "Customer reports repeatable index timeout behavior on a 4.2 GB monorepo. Request ID: req_9da21. Evidence points to the API edge timing out while waiting on indexing job idx_4421. Impact: onboarding for new engineers is blocked. Please investigate the API edge timeout path and indexing queue behavior."
+  }
+}

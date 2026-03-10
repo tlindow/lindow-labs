@@ -1,0 +1,141 @@
+[
+  {
+    "id": "login-loop-sso",
+    "title": "Enterprise SSO login loop",
+    "customer_message": "After our company enabled SSO this morning, I can sign in but Cursor sends me back to the login screen every time. Incognito still works. Can you help today?",
+    "context": {
+      "account": "Enterprise workspace with enforced SSO",
+      "logs_excerpt": "Auth logs show repeated session refresh attempts followed by SESSION_COOKIE_STALE for user tl-team-admin.",
+      "known_issue": "Known issue KI-104: stale auth cookies can cause an SSO login loop after an IdP settings change.",
+      "runbook_excerpt": "If SSO login works in incognito, ask the user to sign out, clear site cookies for the app, and retry. Do not file a new bug when KI-104 matches."
+    },
+    "expected": {
+      "failure_point": "auth",
+      "disposition": "known_issue",
+      "min_evidence": 3,
+      "required_evidence_sources": [
+        "customer_message",
+        "known_issue",
+        "runbook"
+      ],
+      "required_customer_reply_keywords": [
+        "known issue",
+        "clear cookies",
+        "incognito"
+      ],
+      "forbidden_customer_reply_keywords": [
+        "linear",
+        "datadog",
+        "mcp",
+        "internal"
+      ],
+      "requires_bug_report": false,
+      "required_bug_report_keywords": [],
+      "requires_follow_up_questions": false
+    }
+  },
+  {
+    "id": "share-button-free-plan",
+    "title": "Disabled share button on free plan",
+    "customer_message": "The Share button in our workspace stays disabled no matter what I do. Is this broken? I expected to invite my teammate today.",
+    "context": {
+      "account": "Free plan workspace with one seat",
+      "logs_excerpt": "No frontend errors. Feature flag evaluation returned share_workspace=false for plan=free.",
+      "known_issue": "",
+      "runbook_excerpt": "The Share button is intentionally disabled on the free plan. Support should explain the plan limit and link to the upgrade path."
+    },
+    "expected": {
+      "failure_point": "client",
+      "disposition": "expected_behavior",
+      "min_evidence": 2,
+      "required_evidence_sources": [
+        "customer_message",
+        "account"
+      ],
+      "required_customer_reply_keywords": [
+        "free plan",
+        "upgrade"
+      ],
+      "forbidden_customer_reply_keywords": [
+        "linear",
+        "datadog",
+        "mcp",
+        "internal"
+      ],
+      "requires_bug_report": false,
+      "required_bug_report_keywords": [],
+      "requires_follow_up_questions": false
+    }
+  },
+  {
+    "id": "repo-index-timeout",
+    "title": "Repository indexing timeout on large workspace",
+    "customer_message": "Our monorepo gets stuck on 'Indexing...' and then the agent stops with a timeout after a few minutes. This started today and blocks onboarding for two new engineers.",
+    "context": {
+      "account": "Pro workspace with a 4.2 GB monorepo",
+      "logs_excerpt": "Request req_9da21 timed out at the API edge after 181 seconds while waiting for repository indexing job idx_4421.",
+      "known_issue": "",
+      "runbook_excerpt": "If indexing repeatedly times out for the same repository and no known issue exists, gather the request ID, confirm reproducibility, and escalate to engineering. Offer a smaller-workspace workaround if available."
+    },
+    "expected": {
+      "failure_point": "api",
+      "disposition": "bug",
+      "min_evidence": 3,
+      "required_evidence_sources": [
+        "customer_message",
+        "logs",
+        "runbook"
+      ],
+      "required_customer_reply_keywords": [
+        "investigating",
+        "retry",
+        "smaller workspace"
+      ],
+      "forbidden_customer_reply_keywords": [
+        "linear",
+        "datadog",
+        "mcp",
+        "internal"
+      ],
+      "requires_bug_report": true,
+      "required_bug_report_keywords": [
+        "index timeout",
+        "request id",
+        "api edge"
+      ],
+      "requires_follow_up_questions": false
+    }
+  },
+  {
+    "id": "missing-request-id",
+    "title": "Cannot investigate without more context",
+    "customer_message": "The app flashed an error and then recovered. I did not capture the message, but it felt random. Can you tell what happened?",
+    "context": {
+      "account": "Team plan workspace",
+      "logs_excerpt": "No timestamp or request ID was supplied, so support cannot isolate a matching trace.",
+      "known_issue": "",
+      "runbook_excerpt": "If the report is too vague to investigate, ask for the exact timestamp, any request ID, and a screenshot or reproduction steps before escalating."
+    },
+    "expected": {
+      "failure_point": "unknown",
+      "disposition": "needs_more_info",
+      "min_evidence": 1,
+      "required_evidence_sources": [
+        "customer_message"
+      ],
+      "required_customer_reply_keywords": [
+        "request id",
+        "screenshot"
+      ],
+      "forbidden_customer_reply_keywords": [
+        "linear",
+        "datadog",
+        "mcp",
+        "internal"
+      ],
+      "requires_bug_report": false,
+      "required_bug_report_keywords": [],
+      "requires_follow_up_questions": true
+    }
+  }
+]

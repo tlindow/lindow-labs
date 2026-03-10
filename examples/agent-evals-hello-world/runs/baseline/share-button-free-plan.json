@@ -1,0 +1,23 @@
+{
+  "ticket_id": "share-button-free-plan",
+  "summary": "The disabled Share button might be a frontend bug because the customer expects the workspace invite flow to be available.",
+  "failure_point": "client",
+  "disposition": "bug",
+  "confidence": 0.58,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer cannot click Share."
+    },
+    {
+      "source": "logs",
+      "note": "No obvious frontend error appears in the logs."
+    }
+  ],
+  "customer_reply": "I am escalating this disabled Share button issue to engineering now.",
+  "follow_up_questions": [],
+  "bug_report": {
+    "title": "Disabled share button",
+    "body": "Customer on a workspace cannot invite a teammate."
+  }
+}

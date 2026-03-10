@@ -1,0 +1,24 @@
+{
+  "ticket_id": "login-loop-sso",
+  "summary": "The report matches a known issue where stale auth cookies cause an SSO login loop after identity-provider settings change. Because login succeeds in incognito, the failure is most likely in auth session state rather than a broader outage.",
+  "failure_point": "auth",
+  "disposition": "known_issue",
+  "confidence": 0.93,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer says the login loop disappears in incognito, which points to browser session state."
+    },
+    {
+      "source": "known_issue",
+      "note": "KI-104 describes the same SSO login loop after an IdP change when stale cookies remain."
+    },
+    {
+      "source": "runbook",
+      "note": "The runbook says to ask the user to clear cookies and retry instead of filing a new bug when KI-104 matches."
+    }
+  ],
+  "customer_reply": "Thanks for the details. This matches a known issue that can happen after an SSO configuration change. Please sign out, clear cookies for the app, and try again. If you want a quick comparison while you test, the fact that incognito works is another sign that the cookie reset should help.",
+  "follow_up_questions": [],
+  "bug_report": null
+}

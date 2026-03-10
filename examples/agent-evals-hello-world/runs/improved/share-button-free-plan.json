@@ -1,0 +1,24 @@
+{
+  "ticket_id": "share-button-free-plan",
+  "summary": "The disabled Share button lines up with a free-plan limitation rather than a product defect. The customer expectation is understandable, but the current behavior is expected for this account tier.",
+  "failure_point": "client",
+  "disposition": "expected_behavior",
+  "confidence": 0.91,
+  "evidence": [
+    {
+      "source": "customer_message",
+      "note": "The customer is trying to invite a teammate from a workspace where the Share button stays disabled."
+    },
+    {
+      "source": "account",
+      "note": "The fixture says the workspace is on the free plan with one seat."
+    },
+    {
+      "source": "runbook",
+      "note": "The runbook states that Share is intentionally disabled on the free plan and support should point the user to the upgrade path."
+    }
+  ],
+  "customer_reply": "I checked the workspace details and this is expected on the free plan. The Share button unlocks after you upgrade to a paid plan, which is what allows teammate invites. If you want, I can point you to the upgrade path so you can add your teammate today.",
+  "follow_up_questions": [],
+  "bug_report": null
+}
