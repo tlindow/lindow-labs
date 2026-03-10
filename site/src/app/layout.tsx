@@ -16,13 +16,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AI Foundations — Prompt Engineering, Evaluation, and MLOps",
+  title: "After the Demo — Optimizing AI After Deployment",
   description:
-    "An educational platform exploring prompt engineering, evaluation systems, MLOps, and the operating layer of AI-native companies.",
+    "Playbooks and tutorials for support, solutions, and post-sales engineers improving AI tools after deployment with evals, workflow fixes, and safer customer operations.",
   openGraph: {
-    title: "AI Foundations — Prompt Engineering, Evaluation, and MLOps",
+    title: "After the Demo — Optimizing AI After Deployment",
     description:
-      "Research and education for prompt systems, evaluation loops, and AI-native operations.",
+      "A public tutorial hub for debugging, evaluating, and continuously improving AI after launch.",
     type: "website",
   },
 };

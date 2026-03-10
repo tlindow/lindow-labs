@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Linkedin, Github, Mail } from "lucide-react";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 
@@ -22,11 +23,11 @@ const socials = [
 ];
 
 const navLinks = [
-  { label: "Thesis", href: "#thesis" },
-  { label: "Research", href: "#research" },
-  { label: "Model", href: "#operating-model" },
-  { label: "Curriculum", href: "#curriculum" },
-  { label: "Join", href: "#join" },
+  { label: "Why", href: "/#why" },
+  { label: "Workflow", href: "/#workflow" },
+  { label: "Tutorial", href: "/tutorials/agent-evals-hello-world" },
+  { label: "Loops", href: "/#loops" },
+  { label: "Join", href: "/#join" },
 ];
 
 export default function Footer() {
@@ -37,11 +38,11 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-12">
             <div>
               <p className="font-display font-semibold text-xl sm:text-2xl text-foreground">
-                AI Foundations
+                After the Demo
               </p>
               <p className="mt-2 text-sm text-muted max-w-xs">
-                Researching prompt systems, evaluation loops, and MLOps for
-                teams building AI-native products.
+                Playbooks and tutorials for optimizing AI tools after they are
+                deployed into real customer workflows.
               </p>
               <div className="mt-5 flex gap-3">
                 {socials.map((s) => {
@@ -69,12 +70,12 @@ export default function Footer() {
               <ul className="mt-3 space-y-1.5">
                 {navLinks.map((l) => (
                   <li key={l.href}>
-                    <a
+                    <Link
                       href={l.href}
                       className="text-sm text-muted hover:text-foreground transition-colors"
                     >
                       {l.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -84,7 +85,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} AI Foundations. Built with Next.js
+            &copy; {new Date().getFullYear()} After the Demo. Built with Next.js
             and Tailwind CSS.
           </p>
         </div>

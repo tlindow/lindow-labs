@@ -15,33 +15,33 @@ import MagneticButton from "@/components/animations/MagneticButton";
 const offerings = [
   {
     icon: Code2,
-    title: "Prompt Systems",
+    title: "Gather the right context",
     description:
-      "Designing reusable prompt patterns, context packing strategies, and instruction hierarchies that make model behavior easier to reason about.",
+      "Pull together customer reports, logs, known issues, account context, and runbooks so the investigation starts with evidence instead of guesswork.",
     color: "bg-sky-light",
     iconColor: "text-sky",
   },
   {
     icon: Compass,
-    title: "Evaluation Loops",
+    title: "Identify the failure point",
     description:
-      "Building rubrics, regression sets, and adversarial tests so teams can measure quality instead of arguing about vibes.",
+      "Narrow the problem to client, auth, API, dependency, or an unknown bucket that still needs more detail before anyone can act.",
     color: "bg-peach-light",
     iconColor: "text-peach",
   },
   {
     icon: FolderOpen,
-    title: "Human Review Operations",
+    title: "Decide bug or behavior",
     description:
-      "Studying how domain experts, reviewers, and operators can continuously improve outputs without becoming the bottleneck.",
+      "Compare what you see against the runbook, classify the case cleanly, and avoid noisy escalations when the issue is already known or expected.",
     color: "bg-mint-light",
     iconColor: "text-mint",
   },
   {
     icon: MessageCircle,
-    title: "Deployment Playbooks",
+    title: "Close the loop safely",
     description:
-      "Mapping the operational patterns that move AI systems from prototypes into context-specific, reliable production workflows.",
+      "Draft a customer-safe reply, create a bug ticket only when it is warranted, and turn repeated failures into eval cases or docs fixes.",
     color: "bg-violet-light",
     iconColor: "text-violet",
   },
@@ -49,7 +49,7 @@ const offerings = [
 
 export default function Mentoring() {
   return (
-    <section id="research" className="relative overflow-hidden">
+    <section id="workflow" className="relative overflow-hidden">
       <div className="relative bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-violet/0 via-white/10 to-violet/0"
@@ -61,25 +61,25 @@ export default function Mentoring() {
           <ScrollReveal direction="none">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
               <Sparkles size={14} className="animate-float" />
-              Founding research agenda
+              AI-native support workflow
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
-              What the platform studies
+              What optimization looks like after deployment
             </h2>
 
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
-              This is not a frontier model lab. It is a practical research layer
-              focused on the work between the model and the business:
-              prompt engineering, evaluation systems, workflow instrumentation,
-              and the human processes that make AI products compound.
+              In the age of AI, support work becomes a research loop. You gather
+              the right context, locate the failure point, decide whether the
+              behavior should be escalated, and use the result to improve the
+              system instead of solving the same ticket from scratch every week.
             </p>
 
             <MagneticButton
-              href="#join"
+              href="/tutorials/agent-evals-hello-world"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-all hover:shadow-xl hover:shadow-white/20"
             >
-              Explore the Curriculum
+              Work Through the Tutorial
               <ArrowRight size={15} />
             </MagneticButton>
           </ScrollReveal>
@@ -90,7 +90,7 @@ export default function Mentoring() {
         <div className="mx-auto max-w-5xl">
           <ScrollReveal>
             <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
-              Research tracks
+              The workflow
             </p>
           </ScrollReveal>
 
@@ -118,18 +118,18 @@ export default function Mentoring() {
           <ScrollReveal delay={0.2}>
             <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
               <p className="text-base sm:text-lg font-medium text-foreground">
-                Building in this space already?
+                The hello world stays intentionally small.
               </p>
               <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
-                Send a note about the workflows, failure modes, or evaluation
-                questions your team is seeing. The goal is to compare notes and
-                sharpen the playbooks together.
+                Four scenarios are enough to show the loop: capture a support
+                investigation artifact, score it, tighten the prompt, and compare
+                the next run against the same definition of done.
               </p>
               <a
-                href="mailto:tyler.lindow@gmail.com"
+                href="/tutorials/agent-evals-hello-world"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
               >
-                Start the conversation
+                Open the public tutorial
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </a>
             </div>

@@ -3,18 +3,18 @@
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
 
 const technologies = [
-  { name: "Prompt systems", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Context engineering", bg: "bg-amber-light", dot: "bg-amber" },
-  { name: "Evaluations", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Tracing", bg: "bg-violet-light", dot: "bg-violet" },
-  { name: "Human review", bg: "bg-mint-light", dot: "bg-mint" },
-  { name: "Agent workflows", bg: "bg-indigo-light", dot: "bg-indigo" },
-  { name: "RAG systems", bg: "bg-peach-light", dot: "bg-peach" },
-  { name: "Guardrails", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Observability", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Latency budgets", bg: "bg-indigo-light", dot: "bg-indigo" },
-  { name: "Cost controls", bg: "bg-rose-light", dot: "bg-rose" },
-  { name: "Vertical playbooks", bg: "bg-violet-light", dot: "bg-violet" },
+  { name: "Support investigations", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Known-issue search", bg: "bg-amber-light", dot: "bg-amber" },
+  { name: "Agent evals", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Failure-point triage", bg: "bg-violet-light", dot: "bg-violet" },
+  { name: "Customer-safe replies", bg: "bg-mint-light", dot: "bg-mint" },
+  { name: "Bug ticket drafting", bg: "bg-indigo-light", dot: "bg-indigo" },
+  { name: "Runbooks", bg: "bg-peach-light", dot: "bg-peach" },
+  { name: "Traces and logs", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Regression sets", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Prompt revisions", bg: "bg-indigo-light", dot: "bg-indigo" },
+  { name: "Docs feedback", bg: "bg-rose-light", dot: "bg-rose" },
+  { name: "Post-sales AI ops", bg: "bg-violet-light", dot: "bg-violet" },
 ];
 
 export default function TechStack() {
@@ -27,9 +27,9 @@ export default function TechStack() {
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-amber" />
           <p className="mt-3 sm:mt-4 text-muted text-[15px] sm:text-lg max-w-2xl">
-            The platform is oriented around the operational vocabulary teams need
-            when they move from experimenting with models to running them inside
-            real products.
+            The focus is not generic AI education. It is the operational layer
+            around live tools: how teams investigate failures, write safer
+            replies, improve prompts, and keep shipping after launch.
           </p>
         </ScrollReveal>
 

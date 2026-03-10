@@ -5,47 +5,48 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 
 const topics = [
   {
-    title: "Prompt Engineering Fundamentals",
+    title: "Read the support scenarios",
     description:
-      "Instruction design, context windows, role separation, and the practical mechanics behind more reliable model behavior.",
+      "Start with four small tickets that cover a known issue, expected behavior, a real bug, and a needs-more-info case.",
     bg: "bg-rose-light",
   },
   {
-    title: "Evaluation Design",
+    title: "Ask your agent for a run artifact",
     description:
-      "How to build scorecards, review flows, and targeted tests that give teams confidence in iteration.",
+      "Use Cursor, Claude Code, or a similar tool to generate a structured support investigation rather than an unscored blob of chat.",
     bg: "bg-amber-light",
   },
   {
-    title: "Human-in-the-Loop Systems",
+    title: "Score the run deterministically",
     description:
-      "Where expert review belongs, how feedback compounds, and how operators become part of the product loop.",
+      "Check the artifact for failure-point accuracy, evidence quality, safe reply language, follow-up questions, and escalation behavior.",
     bg: "bg-sky-light",
   },
   {
-    title: "AI-Native Team Design",
+    title: "Tighten the prompt and repeat",
     description:
-      "What orgs need beyond models: workflows, instrumentation, playbooks, and cross-functional operating habits.",
+      "Use the failing checks as feedback, then improve the prompt or schema until the run passes the same benchmark consistently.",
     bg: "bg-mint-light",
   },
 ];
 
 export default function Speaking() {
   return (
-    <section id="curriculum" className="py-16 sm:py-24 px-4 sm:px-6 bg-surface-alt">
+    <section id="tutorial" className="py-16 sm:py-24 px-4 sm:px-6 bg-surface-alt">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <div className="flex items-center gap-3">
             <Mic size={24} className="text-rose sm:w-7 sm:h-7" />
             <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-              Curriculum
+              Public tutorial
             </h2>
           </div>
           <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-rose" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            The ideas here need to become teachable. This section frames the first
-            modules for workshops, briefings, essays, and future working sessions.
+            The first tutorial on the site is a small hello-world project for
+            agent evals. It assumes you already use Cursor or Claude Code in daily
+            troubleshooting and want a concrete way to score improvements.
           </p>
         </ScrollReveal>
 
@@ -69,10 +70,10 @@ export default function Speaking() {
         <ScrollReveal delay={0.3}>
           <div className="mt-8 sm:mt-10">
             <a
-              href="mailto:tyler.lindow@gmail.com"
+              href="/tutorials/agent-evals-hello-world"
               className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
             >
-              Want to shape the curriculum? Let&rsquo;s talk
+              Open the hello world tutorial
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>

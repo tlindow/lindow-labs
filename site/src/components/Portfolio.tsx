@@ -4,55 +4,55 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 
 const pillars = [
   {
-    title: "Start with model behavior",
+    title: "Turn escalations into evals",
     description:
-      "Define what good, bad, and risky outputs look like before adding layers of architecture around the model.",
-    tags: ["rubrics", "failure modes", "examples"],
+      "A repeated support case should become a scored example, not a story that disappears into Slack after the ticket closes.",
+    tags: ["scenarios", "tickets", "benchmarks"],
     accent: "group-hover:border-rose/40",
     hover: "group-hover:text-rose",
     glow: "group-hover:shadow-rose/10",
   },
   {
-    title: "Treat prompts like software",
+    title: "Capture the run cleanly",
     description:
-      "Version prompts, review them, diff them, and connect them to the exact evaluations they are expected to pass.",
-    tags: ["versioning", "review", "change control"],
+      "Score structured investigation artifacts so you can check reasoning, evidence, reply safety, and escalation quality in one place.",
+    tags: ["artifacts", "json", "traces"],
     accent: "group-hover:border-peach/40",
     hover: "group-hover:text-peach",
     glow: "group-hover:shadow-peach/10",
   },
   {
-    title: "Build evals before scale",
+    title: "Keep the benchmark small",
     description:
-      "Regression sets and adversarial cases should arrive early so teams can iterate with signal instead of instinct.",
-    tags: ["regression", "scorecards", "adversarial"],
+      "You do not need a giant dataset to begin. A tight set of representative tickets is enough to surface regressions quickly.",
+    tags: ["small sets", "signal", "regressions"],
     accent: "group-hover:border-mint/40",
     hover: "group-hover:text-mint",
     glow: "group-hover:shadow-mint/10",
   },
   {
-    title: "Keep humans in the loop",
+    title: "Version the instructions",
     description:
-      "High-leverage review systems turn expert judgment into structured feedback, better prompts, and better datasets.",
-    tags: ["review queues", "annotation", "feedback"],
+      "The prompt, schema, and expected outputs should evolve together so the agent gets better at the exact work you care about.",
+    tags: ["prompting", "schemas", "reviews"],
     accent: "group-hover:border-sky/40",
     hover: "group-hover:text-sky",
     glow: "group-hover:shadow-sky/10",
   },
   {
-    title: "Instrument production paths",
+    title: "Protect customer-facing language",
     description:
-      "Trace latency, cost, context size, and failure patterns so deployment becomes an observed system, not a black box.",
-    tags: ["tracing", "latency", "cost"],
+      "A useful eval does more than classify the issue. It also checks that the reply stays calm, actionable, and free from internal-only jargon.",
+    tags: ["tone", "safety", "replies"],
     accent: "group-hover:border-indigo/40",
     hover: "group-hover:text-indigo",
     glow: "group-hover:shadow-indigo/10",
   },
   {
-    title: "Specialize by domain",
+    title: "Feed the system back",
     description:
-      "The real opportunity is not generic prompting. It is domain-specific playbooks that understand the workflow, stakes, and language of a vertical.",
-    tags: ["playbooks", "taxonomy", "determinism"],
+      "Good support work improves prompts, runbooks, docs, escalation paths, and the next version of the benchmark at the same time.",
+    tags: ["docs", "tickets", "playbooks"],
     accent: "group-hover:border-violet/40",
     hover: "group-hover:text-violet",
     glow: "group-hover:shadow-violet/10",
@@ -61,16 +61,16 @@ const pillars = [
 
 export default function Portfolio() {
   return (
-    <section id="operating-model" className="py-16 sm:py-24 px-4 sm:px-6">
+    <section id="loops" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Operating Model
+            The optimization loops
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-peach" />
           <p className="mt-3 sm:mt-4 text-muted text-[15px] sm:text-lg max-w-xl">
-            A working model for how AI-native teams can turn raw model capability
-            into dependable systems with clearer feedback loops.
+            After deployment, the wins come from turning repeated failures into
+            tighter evals, safer responses, and better workflows around the model.
           </p>
         </ScrollReveal>
 

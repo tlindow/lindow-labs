@@ -7,25 +7,25 @@ import MagneticButton from "@/components/animations/MagneticButton";
 const formats = [
   {
     icon: Video,
-    title: "Briefings",
+    title: "Workflow teardowns",
     description:
-      "Concise explanations of prompt systems, evaluation design, and the operating choices that matter in production.",
+      "Break down a real support path from symptom to reply, then show where an eval can keep the next investigation tighter.",
     iconBg: "bg-rose-light",
     iconColor: "text-rose",
   },
   {
     icon: FileText,
-    title: "Experiment Notes",
+    title: "Escalations to evals",
     description:
-      "Working notes from testing frameworks, prompts, failure cases, and attempts to make model behavior more deterministic.",
+      "Turn repeated tickets, known issues, and product quirks into small benchmark cases that can be reused every week.",
     iconBg: "bg-sky-light",
     iconColor: "text-sky",
   },
   {
     icon: Rss,
-    title: "Operator Network",
+    title: "Operator notes",
     description:
-      "A place for practitioners, researchers, and curious builders to compare notes on AI-native workflows.",
+      "Short practical notes for support, solutions, and post-sales engineers who want a stronger operating model for AI tools.",
     iconBg: "bg-amber-light",
     iconColor: "text-amber",
   },
@@ -37,14 +37,14 @@ export default function Content() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Library & Community
+            Join the direction
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-mint" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            The first release should look like a living library: foundational
-            notes, practical experiments, and a gathering point for people
-            building the operating layer of AI.
+            The site is heading toward a community for the people optimizing AI
+            after launch: support investigations, workflow fixes, agent evals,
+            and customer-safe operations.
           </p>
         </ScrollReveal>
 
@@ -72,14 +72,14 @@ export default function Content() {
         <ScrollReveal delay={0.2}>
           <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg font-medium text-foreground">
-              The first circle is forming now.
+              Want to shape what comes next?
             </p>
             <p className="mt-2 text-sm text-muted">
-              Reach out if you want to follow the research, contribute ideas, or
-              help shape the first version of the platform.
+              Reach out if you want more tutorials, workflow teardowns, or a
+              community focused on optimizing AI tools after they are deployed.
             </p>
             <MagneticButton
-              href="mailto:tyler.lindow@gmail.com?subject=AI%20Foundations"
+              href="mailto:tyler.lindow@gmail.com?subject=After%20the%20Demo"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
             >
               Join by Email

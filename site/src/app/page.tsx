@@ -16,8 +16,8 @@ export default function Home() {
         <Hero />
         <About />
         <Mentoring />
-        <Portfolio />
         <Speaking />
+        <Portfolio />
         <Content />
         <TechStack />
       </main>

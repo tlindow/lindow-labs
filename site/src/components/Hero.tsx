@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
+import { ArrowDown, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import GradientBeam from "@/components/animations/GradientBeam";
@@ -28,13 +28,14 @@ export default function Hero() {
             />
             <div className="relative rounded-[2rem] border border-border/80 glass px-5 py-5 sm:px-7 sm:py-6 shadow-lg">
               <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-violet">
-                <span className="rounded-full bg-violet-light px-3 py-1">Prompt systems</span>
-                <span className="rounded-full bg-sky-light px-3 py-1">Evaluation loops</span>
-                <span className="rounded-full bg-mint-light px-3 py-1">Human review ops</span>
+                <span className="rounded-full bg-violet-light px-3 py-1">Support investigations</span>
+                <span className="rounded-full bg-sky-light px-3 py-1">Agent evals</span>
+                <span className="rounded-full bg-mint-light px-3 py-1">Post-sales AI ops</span>
               </div>
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted max-w-xl mx-auto">
-                Research and education for teams trying to make model behavior
-                more legible, more reliable, and more useful in production.
+                A practical guide to keeping AI tools useful after launch, when
+                the hard work shifts from shipping a demo to handling production
+                tickets, regressions, and real customer workflows.
               </p>
             </div>
           </div>
@@ -46,11 +47,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Prompt engineering &middot; Evaluation design &middot; MLOps
+          Optimize AI after deployment &middot; Cursor-native workflows
         </motion.p>
 
         <AnimatedText
-          text="AI Foundations"
+          text="After the Demo"
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
@@ -62,7 +63,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
         >
-          Building the operating layer for AI-native companies.
+          How do you keep AI tools getting better after they ship?
         </motion.p>
 
         <motion.p
@@ -71,9 +72,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
         >
-          AI Foundations studies the systems between frontier models and business
-          outcomes: prompt architecture, evaluation design, deployment workflows,
-          and the human feedback loops that make AI products durable.
+          This site is for support, solutions, and post-sales engineers using
+          Cursor, Claude Code, and similar tools to debug failures, run agent
+          evals, improve customer replies, and tighten the workflows around AI in
+          production.
         </motion.p>
 
         <motion.div
@@ -83,20 +85,18 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.1 }}
         >
           <MagneticButton
-            href="#thesis"
+            href="/tutorials/agent-evals-hello-world"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
           >
-            Read the Thesis
+            Start the Tutorial
           </MagneticButton>
           <div className="flex gap-3 w-full sm:w-auto">
             <MagneticButton
-              href="https://www.linkedin.com/in/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#workflow"
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
             >
-              <Linkedin size={16} />
-              <span className="sm:inline">LinkedIn</span>
+              <ArrowDown size={16} />
+              <span className="sm:inline">See Workflow</span>
             </MagneticButton>
             <MagneticButton
               href="https://github.com/tlindow"
@@ -118,7 +118,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.a
-          href="#thesis"
+          href="#why"
           className="inline-flex items-center gap-2 mt-12 sm:mt-16 text-sm text-muted hover:text-foreground transition-colors"
           aria-label="Scroll down"
           initial={{ opacity: 0 }}

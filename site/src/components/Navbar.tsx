@@ -1,16 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "Thesis", href: "#thesis" },
-  { label: "Research", href: "#research" },
-  { label: "Model", href: "#operating-model" },
-  { label: "Curriculum", href: "#curriculum" },
-  { label: "Join", href: "#join" },
-  { label: "Connect", href: "#connect" },
+  { label: "Why", href: "/#why" },
+  { label: "Workflow", href: "/#workflow" },
+  { label: "Tutorial", href: "/tutorials/agent-evals-hello-world" },
+  { label: "Loops", href: "/#loops" },
+  { label: "Join", href: "/#join" },
+  { label: "Connect", href: "/#connect" },
 ];
 
 export default function Navbar() {
@@ -22,23 +23,23 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="bg-background/80 backdrop-blur-md border-b border-border">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-display font-semibold text-lg sm:text-xl tracking-tight text-foreground"
           >
-            AI Foundations
-          </a>
+            After the Demo
+          </Link>
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">
             {links.map((l) => (
               <li key={l.href}>
-                <a
+                <Link
                   href={l.href}
                   className="relative text-sm font-medium text-muted hover:text-foreground transition-colors group"
                 >
                   {l.label}
                   <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-violet rounded-full transition-all duration-300 group-hover:w-full" />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -76,13 +77,13 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <a
+                  <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
                     className="block py-2.5 px-3 rounded-lg text-[15px] font-medium text-muted hover:text-foreground hover:bg-surface-alt transition-colors"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
