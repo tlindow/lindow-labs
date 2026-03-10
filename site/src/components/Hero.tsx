@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
@@ -14,28 +13,29 @@ export default function Hero() {
       <FloatingOrbs />
       <GradientBeam />
 
-      <div className="max-w-3xl text-center">
+      <div className="max-w-4xl text-center">
         <motion.div
           className="mb-6 sm:mb-8 flex justify-center"
           initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <div className="relative group">
+          <div className="relative group max-w-2xl w-full">
             <motion.div
-              className="absolute -inset-3 rounded-full bg-gradient-to-br from-violet/30 via-indigo/20 to-sky/30 blur-xl"
-              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+              className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-violet/30 via-indigo/20 to-sky/30 blur-xl"
+              animate={{ scale: [1, 1.04, 1], opacity: [0.45, 0.75, 0.45] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
-              <Image
-                src="/IMG_0548.jpeg"
-                alt="Tyler Lindow"
-                fill
-                sizes="(max-width: 640px) 128px, 160px"
-                className="object-cover object-[center_20%]"
-                priority
-              />
+            <div className="relative rounded-[2rem] border border-border/80 glass px-5 py-5 sm:px-7 sm:py-6 shadow-lg">
+              <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-violet">
+                <span className="rounded-full bg-violet-light px-3 py-1">Prompt systems</span>
+                <span className="rounded-full bg-sky-light px-3 py-1">Evaluation loops</span>
+                <span className="rounded-full bg-mint-light px-3 py-1">Human review ops</span>
+              </div>
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted max-w-xl mx-auto">
+                Research and education for teams trying to make model behavior
+                more legible, more reliable, and more useful in production.
+              </p>
             </div>
           </div>
         </motion.div>
@@ -46,24 +46,34 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Software Developer &middot; Builder &middot; Mentor
+          Prompt engineering &middot; Evaluation design &middot; MLOps
         </motion.p>
 
         <AnimatedText
-          text="Hey, I'm Tyler."
+          text="AI Foundations"
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
         />
 
         <motion.p
-          className="mt-4 sm:mt-6 text-base sm:text-xl leading-relaxed text-muted max-w-2xl mx-auto px-2"
+          className="mt-4 sm:mt-6 text-lg sm:text-2xl leading-relaxed text-foreground max-w-3xl mx-auto px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
         >
-          I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
+          Building the operating layer for AI-native companies.
+        </motion.p>
+
+        <motion.p
+          className="mt-3 text-base sm:text-xl leading-relaxed text-muted max-w-3xl mx-auto px-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1 }}
+        >
+          AI Foundations studies the systems between frontier models and business
+          outcomes: prompt architecture, evaluation design, deployment workflows,
+          and the human feedback loops that make AI products durable.
         </motion.p>
 
         <motion.div
@@ -73,10 +83,10 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.1 }}
         >
           <MagneticButton
-            href="#mentoring"
+            href="#thesis"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
           >
-            Work With Me
+            Read the Thesis
           </MagneticButton>
           <div className="flex gap-3 w-full sm:w-auto">
             <MagneticButton
@@ -108,7 +118,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.a
-          href="#about"
+          href="#thesis"
           className="inline-flex items-center gap-2 mt-12 sm:mt-16 text-sm text-muted hover:text-foreground transition-colors"
           aria-label="Scroll down"
           initial={{ opacity: 0 }}

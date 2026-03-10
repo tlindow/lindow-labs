@@ -5,11 +5,11 @@ import CountUp from "@/components/animations/CountUp";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6">
+    <section id="thesis" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="mx-auto max-w-3xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            About Me
+            The Thesis
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-sky" />
         </ScrollReveal>
@@ -17,41 +17,36 @@ export default function About() {
         <ScrollReveal delay={0.15}>
           <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
             <p>
-              I got into software development because I realized I had no idea how
-              software worked. At the time I was doing research at the Field
-              Museum in Chicago when I saw someone pull up a terminal and open an
-              application that visitors would interact with. I went through an
-              immersive coding program, dove into JavaScript and React, and never
-              looked back. Building for the web scratches every itch I have
-              &mdash; problem-solving, design, creativity, and the instant feedback
-              of seeing something come to life in a browser.
+              The next wave of durable advantage will not come only from training
+              better models. It will come from organizations that learn how to
+              turn model capability into repeatable operating systems inside
+              real products, real workflows, and real businesses.
             </p>
             <p>
-              I&rsquo;m drawn to projects at the intersection of technology and
-              creativity &mdash; whether that&rsquo;s an interactive booking
-              system, a generative art sketch, or a tool that makes
-              someone&rsquo;s workflow easier. I&rsquo;m passionate about AI in
-              software and always looking to learn more about what people are
-              building.
+              That means treating prompt engineering as interface design,
+              evaluation as product QA, and human review as a compounding source
+              of data, judgment, and refinement. The teams that can operationalize
+              those layers will be the ones that make frontier models useful in
+              context, not just impressive in demos.
             </p>
             <p>
-              Outside of code, I&rsquo;m curious about storytelling, design,
-              and how technology brings people together. Right now I&rsquo;m
-              focused on building in public, mentoring other developers, and
-              creating content.
+              AI Foundations exists to study that layer. The goal is to build a
+              research-driven educational platform around prompt systems, MLOps,
+              evaluation loops, and the playbooks AI-native companies need to
+              operate with more determinism.
             </p>
           </div>
         </ScrollReveal>
 
         <StaggerContainer className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8" staggerDelay={0.15}>
           <StaggerItem>
-            <Stat label="GitHub Repos" value="45+" color="bg-rose-light" />
+            <Stat label="Year this becomes table stakes" value="2026" color="bg-rose-light" />
           </StaggerItem>
           <StaggerItem>
-            <Stat label="Primary Stack" value="React / TS" color="bg-sky-light" />
+            <Stat label="Core layers: prompt, eval, ops" value="3" color="bg-sky-light" />
           </StaggerItem>
           <StaggerItem>
-            <Stat label="Focus" value="Mentoring" color="bg-mint-light" />
+            <Stat label="Goal: more reliable model behavior" value="1" color="bg-mint-light" />
           </StaggerItem>
         </StaggerContainer>
       </div>

@@ -15,33 +15,33 @@ import MagneticButton from "@/components/animations/MagneticButton";
 const offerings = [
   {
     icon: Code2,
-    title: "Code Reviews & Pairing",
+    title: "Prompt Systems",
     description:
-      "Walk through your code together, talk through trade-offs, and sharpen your problem-solving.",
+      "Designing reusable prompt patterns, context packing strategies, and instruction hierarchies that make model behavior easier to reason about.",
     color: "bg-sky-light",
     iconColor: "text-sky",
   },
   {
     icon: Compass,
-    title: "Career Coaching",
+    title: "Evaluation Loops",
     description:
-      "Navigate bootcamps, self-study, the job search, or your next career move with someone who's been there.",
+      "Building rubrics, regression sets, and adversarial tests so teams can measure quality instead of arguing about vibes.",
     color: "bg-peach-light",
     iconColor: "text-peach",
   },
   {
     icon: FolderOpen,
-    title: "Portfolio & Brand Building",
+    title: "Human Review Operations",
     description:
-      "Build a GitHub presence, personal site, and project portfolio that shows what you can really do.",
+      "Studying how domain experts, reviewers, and operators can continuously improve outputs without becoming the bottleneck.",
     color: "bg-mint-light",
     iconColor: "text-mint",
   },
   {
     icon: MessageCircle,
-    title: "Open Office Hours",
+    title: "Deployment Playbooks",
     description:
-      "No agenda needed — bring your questions, your ideas, or just come to think out loud.",
+      "Mapping the operational patterns that move AI systems from prototypes into context-specific, reliable production workflows.",
     color: "bg-violet-light",
     iconColor: "text-violet",
   },
@@ -49,10 +49,8 @@ const offerings = [
 
 export default function Mentoring() {
   return (
-    <section id="mentoring" className="relative overflow-hidden">
-      {/* Pastel violet banner */}
+    <section id="research" className="relative overflow-hidden">
       <div className="relative bg-gradient-to-br from-violet via-indigo to-sky py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
-        {/* Animated gradient overlay */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-violet/0 via-white/10 to-violet/0"
           animate={{ x: ["-100%", "100%"] }}
@@ -63,38 +61,36 @@ export default function Mentoring() {
           <ScrollReveal direction="none">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6 backdrop-blur-sm">
               <Sparkles size={14} className="animate-float" />
-              Now booking 1:1 sessions
+              Founding research agenda
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight text-white">
-              Work With Me
+              What the platform studies
             </h2>
 
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-white/85 max-w-2xl mx-auto">
-              I love helping developers grow. Whether you&rsquo;re just starting
-              out, switching careers, or looking to level up &mdash; I&rsquo;d
-              genuinely enjoy working with you. Let&rsquo;s figure it out together.
+              This is not a frontier model lab. It is a practical research layer
+              focused on the work between the model and the business:
+              prompt engineering, evaluation systems, workflow instrumentation,
+              and the human processes that make AI products compound.
             </p>
 
             <MagneticButton
-              href="https://calendly.com/tylerlindow/elevate"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#join"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-violet hover:bg-white/90 transition-all hover:shadow-xl hover:shadow-white/20"
             >
-              Book a Session
+              Explore the Curriculum
               <ArrowRight size={15} />
             </MagneticButton>
           </ScrollReveal>
         </div>
       </div>
 
-      {/* Offerings grid on cream */}
       <div className="bg-surface-alt py-14 sm:py-20 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl">
           <ScrollReveal>
             <p className="text-center text-sm font-semibold uppercase tracking-widest text-violet mb-10 sm:mb-12">
-              How I can help
+              Research tracks
             </p>
           </ScrollReveal>
 
@@ -122,18 +118,18 @@ export default function Mentoring() {
           <ScrollReveal delay={0.2}>
             <div className="mt-10 sm:mt-12 rounded-2xl bg-surface border border-border p-6 sm:p-8 text-center">
               <p className="text-base sm:text-lg font-medium text-foreground">
-                Not sure where to start? That&rsquo;s totally fine.
+                Building in this space already?
               </p>
               <p className="mt-2 text-sm text-muted max-w-lg mx-auto">
-                Send me a message and tell me a bit about where you&rsquo;re at.
-                We&rsquo;ll find the right way to work together &mdash; no
-                pressure, just a conversation.
+                Send a note about the workflows, failure modes, or evaluation
+                questions your team is seeing. The goal is to compare notes and
+                sharpen the playbooks together.
               </p>
               <a
                 href="mailto:tyler.lindow@gmail.com"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
               >
-                Send me a message
+                Start the conversation
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </a>
             </div>

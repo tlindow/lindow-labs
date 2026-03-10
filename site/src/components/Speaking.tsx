@@ -5,47 +5,47 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animat
 
 const topics = [
   {
-    title: "Building in Public",
+    title: "Prompt Engineering Fundamentals",
     description:
-      "Lessons from learning, failing, and shipping — the honest version of the developer journey.",
+      "Instruction design, context windows, role separation, and the practical mechanics behind more reliable model behavior.",
     bg: "bg-rose-light",
   },
   {
-    title: "Creative Coding",
+    title: "Evaluation Design",
     description:
-      "Using code as a medium for art, storytelling, and interactive experiences.",
+      "How to build scorecards, review flows, and targeted tests that give teams confidence in iteration.",
     bg: "bg-amber-light",
   },
   {
-    title: "Career Transitions",
+    title: "Human-in-the-Loop Systems",
     description:
-      "Navigating the path into software development from a non-traditional background.",
+      "Where expert review belongs, how feedback compounds, and how operators become part of the product loop.",
     bg: "bg-sky-light",
   },
   {
-    title: "Developer Tooling & Workflow",
+    title: "AI-Native Team Design",
     description:
-      "What makes teams productive and developers happy — tools, habits, and culture.",
+      "What orgs need beyond models: workflows, instrumentation, playbooks, and cross-functional operating habits.",
     bg: "bg-mint-light",
   },
 ];
 
 export default function Speaking() {
   return (
-    <section id="speaking" className="py-16 sm:py-24 px-4 sm:px-6 bg-surface-alt">
+    <section id="curriculum" className="py-16 sm:py-24 px-4 sm:px-6 bg-surface-alt">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <div className="flex items-center gap-3">
             <Mic size={24} className="text-rose sm:w-7 sm:h-7" />
             <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-              Speaking
+              Curriculum
             </h2>
           </div>
           <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-rose" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            I&rsquo;m building toward sharing ideas on stage and in virtual
-            events. Here are topics I&rsquo;m excited to talk about.
+            The ideas here need to become teachable. This section frames the first
+            modules for workshops, briefings, essays, and future working sessions.
           </p>
         </ScrollReveal>
 
@@ -72,7 +72,7 @@ export default function Speaking() {
               href="mailto:tyler.lindow@gmail.com"
               className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
             >
-              Interested in having me speak? Let&rsquo;s talk
+              Want to shape the curriculum? Let&rsquo;s talk
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>

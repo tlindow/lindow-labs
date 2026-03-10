@@ -3,18 +3,18 @@
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
 
 const technologies = [
-  { name: "TypeScript", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "JavaScript", bg: "bg-amber-light", dot: "bg-amber" },
-  { name: "React", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Next.js", bg: "bg-violet-light", dot: "bg-violet" },
-  { name: "Node.js", bg: "bg-mint-light", dot: "bg-mint" },
-  { name: "Python", bg: "bg-indigo-light", dot: "bg-indigo" },
-  { name: "HTML5", bg: "bg-peach-light", dot: "bg-peach" },
-  { name: "CSS3", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Tailwind", bg: "bg-sky-light", dot: "bg-sky" },
-  { name: "Docker", bg: "bg-indigo-light", dot: "bg-indigo" },
-  { name: "Git", bg: "bg-rose-light", dot: "bg-rose" },
-  { name: "SQL", bg: "bg-violet-light", dot: "bg-violet" },
+  { name: "Prompt systems", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Context engineering", bg: "bg-amber-light", dot: "bg-amber" },
+  { name: "Evaluations", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Tracing", bg: "bg-violet-light", dot: "bg-violet" },
+  { name: "Human review", bg: "bg-mint-light", dot: "bg-mint" },
+  { name: "Agent workflows", bg: "bg-indigo-light", dot: "bg-indigo" },
+  { name: "RAG systems", bg: "bg-peach-light", dot: "bg-peach" },
+  { name: "Guardrails", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Observability", bg: "bg-sky-light", dot: "bg-sky" },
+  { name: "Latency budgets", bg: "bg-indigo-light", dot: "bg-indigo" },
+  { name: "Cost controls", bg: "bg-rose-light", dot: "bg-rose" },
+  { name: "Vertical playbooks", bg: "bg-violet-light", dot: "bg-violet" },
 ];
 
 export default function TechStack() {
@@ -23,9 +23,14 @@ export default function TechStack() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Tech & Tools
+            Coverage
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-amber" />
+          <p className="mt-3 sm:mt-4 text-muted text-[15px] sm:text-lg max-w-2xl">
+            The platform is oriented around the operational vocabulary teams need
+            when they move from experimenting with models to running them inside
+            real products.
+          </p>
         </ScrollReveal>
 
         <StaggerContainer className="mt-8 sm:mt-12 flex flex-wrap gap-2.5 sm:gap-3" staggerDelay={0.05}>

@@ -16,13 +16,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Lindow — Developer, Builder, Creator",
+  title: "AI Foundations — Prompt Engineering, Evaluation, and MLOps",
   description:
-    "Personal website of Tyler Lindow. Software developer, creative coder, and lifelong learner building for the web.",
+    "An educational platform exploring prompt engineering, evaluation systems, MLOps, and the operating layer of AI-native companies.",
   openGraph: {
-    title: "Tyler Lindow — Developer, Builder, Creator",
+    title: "AI Foundations — Prompt Engineering, Evaluation, and MLOps",
     description:
-      "Software developer, creative coder, and lifelong learner building for the web.",
+      "Research and education for prompt systems, evaluation loops, and AI-native operations.",
     type: "website",
   },
 };
