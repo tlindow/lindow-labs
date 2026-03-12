@@ -3,31 +3,38 @@
 import { motion, useReducedMotion } from "framer-motion";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 
-const events = [
-  {
-    date: "Apr 24, 2026",
-    title: "Desert Product Salon",
-    format: "In-person · San Diego",
-    description:
-      "An intimate evening on product craft, creative discipline, and building with intention.",
-  },
-  {
-    date: "May 15, 2026",
-    title: "Studio Systems Workshop",
-    format: "Live virtual session",
-    description:
-      "A tactical workshop on setting up repeatable systems for design, content, and execution.",
-  },
-  {
-    date: "Jun 07, 2026",
-    title: "Founders on the Coast",
-    format: "Private roundtable · Invite only",
-    description:
-      "A small-format strategic conversation for builders shipping ambitious ideas with clarity.",
-  },
-];
+interface EventsProps {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: Array<{
+    date: string;
+    title: string;
+    format: string;
+    description: string;
+  }>;
+  signup: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    primaryCta: {
+      label: string;
+      href: string;
+    };
+    secondaryCta: {
+      label: string;
+      href: string;
+    };
+  };
+}
 
-export default function Events() {
+export default function Events({
+  eyebrow,
+  title,
+  description,
+  items,
+  signup,
+}: EventsProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -35,16 +42,12 @@ export default function Events() {
       <div className="mx-auto max-w-6xl">
         <ScrollReveal direction="up" distance={34} duration={0.95}>
           <div className="max-w-3xl">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-muted">
-              Events
-            </p>
+            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-muted">{eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-              Curated gatherings for builders who prefer depth over noise.
+              {title}
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-              A focused calendar of experiences designed to be useful, human, and
-              high-signal. Sign up to receive first access and limited-capacity
-              invitations.
+              {description}
             </p>
           </div>
         </ScrollReveal>
@@ -52,7 +55,7 @@ export default function Events() {
         <div className="luxury-divider mt-14 sm:mt-16" />
 
         <div className="mt-4">
-          {events.map((event, index) => (
+          {items.map((event, index) => (
             <ScrollReveal
               key={event.title}
               direction="up"
@@ -88,27 +91,26 @@ export default function Events() {
             className="glass mt-12 rounded-md px-6 py-8 sm:mt-16 sm:px-10 sm:py-10"
           >
             <p className="text-[0.7rem] uppercase tracking-[0.22em] text-muted">
-              Sign up for events
+              {signup.eyebrow}
             </p>
             <h3 className="mt-3 font-display text-3xl leading-tight text-foreground sm:text-4xl">
-              Join the priority event list.
+              {signup.title}
             </h3>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-              No fluff, no spam. You will only receive event invitations,
-              schedule updates, and limited-seat announcements.
+              {signup.description}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href="mailto:tyler.lindow@gmail.com?subject=Event%20Signup&body=Please%20add%20me%20to%20the%20event%20list."
+                href={signup.primaryCta.href}
                 className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold tracking-[0.04em] text-foreground transition-colors duration-500 hover:bg-accent-strong"
               >
-                Sign up for events
+                {signup.primaryCta.label}
               </a>
               <a
-                href="mailto:tyler.lindow@gmail.com?subject=Event%20Question"
+                href={signup.secondaryCta.href}
                 className="inline-flex items-center justify-center rounded-md border border-border bg-surface-elevated px-6 py-3 text-sm font-medium text-foreground transition-colors duration-500 hover:bg-surface"
               >
-                Ask a question
+                {signup.secondaryCta.label}
               </a>
             </div>
           </div>

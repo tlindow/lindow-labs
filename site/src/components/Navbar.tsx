@@ -10,12 +10,15 @@ import {
   useScroll,
 } from "framer-motion";
 
-const links = [
-  { label: "Events", href: "#events" },
-  { label: "Contact", href: "#contact" },
-];
+interface NavbarProps {
+  brand: string;
+  links: Array<{
+    label: string;
+    href: string;
+  }>;
+}
 
-export default function Navbar() {
+export default function Navbar({ brand, links }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -43,7 +46,7 @@ export default function Navbar() {
             href="#"
             className="font-display text-xl tracking-wide text-foreground sm:text-2xl"
           >
-            Tyler Lindow
+            {brand}
           </a>
 
           <ul className="hidden items-center gap-7 md:flex">

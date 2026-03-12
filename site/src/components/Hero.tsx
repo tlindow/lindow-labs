@@ -2,7 +2,27 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
-export default function Hero() {
+interface HeroProps {
+  eyebrow: string;
+  title: string;
+  description: string;
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta: {
+    label: string;
+    href: string;
+  };
+}
+
+export default function Hero({
+  eyebrow,
+  title,
+  description,
+  primaryCta,
+  secondaryCta,
+}: HeroProps) {
   const { scrollY } = useScroll();
   const prefersReducedMotion = useReducedMotion();
   const slowParallax = useTransform(scrollY, [0, 700], [0, 110]);
@@ -28,28 +48,25 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-[0.72rem] uppercase tracking-[0.28em] text-muted">
-            Tyler Lindow Studio
-          </p>
+          <p className="text-[0.72rem] uppercase tracking-[0.28em] text-muted">{eyebrow}</p>
           <h1 className="mt-5 font-display text-5xl leading-[1.03] text-foreground sm:text-6xl lg:text-7xl">
-            Premium events crafted with calm precision.
+            {title}
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            A focused studio for builders and operators who want thoughtful
-            gatherings, practical conversations, and fewer empty trends.
+            {description}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href="#events"
+              href={primaryCta.href}
               className="inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.11em] text-foreground transition-colors duration-500 hover:bg-accent-strong"
             >
-              Explore events
+              {primaryCta.label}
             </a>
             <a
-              href="#contact"
+              href={secondaryCta.href}
               className="glass inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-medium uppercase tracking-[0.1em] text-foreground transition-colors duration-500 hover:bg-white/65"
             >
-              Sign up for events
+              {secondaryCta.label}
             </a>
           </div>
         </motion.div>
