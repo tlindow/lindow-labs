@@ -1,129 +1,59 @@
 "use client";
 
-import Image from "next/image";
-import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
-import { motion } from "framer-motion";
-import FloatingOrbs from "@/components/animations/FloatingOrbs";
-import GradientBeam from "@/components/animations/GradientBeam";
-import AnimatedText from "@/components/animations/AnimatedText";
-import MagneticButton from "@/components/animations/MagneticButton";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const prefersReducedMotion = useReducedMotion();
+  const slowParallax = useTransform(scrollY, [0, 700], [0, 110]);
+  const fastParallax = useTransform(scrollY, [0, 700], [0, 180]);
+
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center px-4 sm:px-6 pt-14 sm:pt-16 overflow-hidden">
-      <FloatingOrbs />
-      <GradientBeam />
+    <section className="paper-grain relative overflow-hidden px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36">
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-20 top-0 h-[60vh] w-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(200,162,77,0.16),transparent_68%)]"
+        style={{ y: prefersReducedMotion ? 0 : slowParallax }}
+      />
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-36 top-[22vh] h-[65vh] w-[72vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(172,139,65,0.24),transparent_70%)]"
+        style={{ y: prefersReducedMotion ? 0 : fastParallax }}
+      />
 
-      <div className="max-w-3xl text-center">
+      <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-          className="mb-6 sm:mb-8 flex justify-center"
-          initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          className="max-w-4xl"
+          initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="relative group">
-            <motion.div
-              className="absolute -inset-3 rounded-full bg-gradient-to-br from-violet/30 via-indigo/20 to-sky/30 blur-xl"
-              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
-              <Image
-                src="/IMG_0548.jpeg"
-                alt="Tyler Lindow"
-                fill
-                sizes="(max-width: 640px) 128px, 160px"
-                className="object-cover object-[center_20%]"
-                priority
-              />
-            </div>
+          <p className="text-[0.72rem] uppercase tracking-[0.28em] text-muted">
+            Tyler Lindow Studio
+          </p>
+          <h1 className="mt-5 font-display text-5xl leading-[1.03] text-foreground sm:text-6xl lg:text-7xl">
+            Premium events crafted with calm precision.
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+            A focused studio for builders and operators who want thoughtful
+            gatherings, practical conversations, and fewer empty trends.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="#events"
+              className="inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.11em] text-foreground transition-colors duration-500 hover:bg-accent-strong"
+            >
+              Explore events
+            </a>
+            <a
+              href="#contact"
+              className="glass inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-medium uppercase tracking-[0.1em] text-foreground transition-colors duration-500 hover:bg-white/65"
+            >
+              Sign up for events
+            </a>
           </div>
         </motion.div>
-
-        <motion.p
-          className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-violet mb-3 sm:mb-4"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          Software Developer &middot; Builder &middot; Mentor
-        </motion.p>
-
-        <AnimatedText
-          text="Hey, I'm Tyler."
-          as="h1"
-          className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
-          delay={0.5}
-        />
-
-        <motion.p
-          className="mt-4 sm:mt-6 text-base sm:text-xl leading-relaxed text-muted max-w-2xl mx-auto px-2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.9 }}
-        >
-          I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
-        </motion.p>
-
-        <motion.div
-          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.1 }}
-        >
-          <MagneticButton
-            href="#mentoring"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
-          >
-            Work With Me
-          </MagneticButton>
-          <div className="flex gap-3 w-full sm:w-auto">
-            <MagneticButton
-              href="https://www.linkedin.com/in/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Linkedin size={16} />
-              <span className="sm:inline">LinkedIn</span>
-            </MagneticButton>
-            <MagneticButton
-              href="https://github.com/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Github size={16} />
-              <span className="sm:inline">GitHub</span>
-            </MagneticButton>
-            <MagneticButton
-              href="mailto:tyler.lindow@gmail.com"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Mail size={16} />
-              <span className="sm:inline">Email</span>
-            </MagneticButton>
-          </div>
-        </motion.div>
-
-        <motion.a
-          href="#about"
-          className="inline-flex items-center gap-2 mt-12 sm:mt-16 text-sm text-muted hover:text-foreground transition-colors"
-          aria-label="Scroll down"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 6, 0] }}
-          transition={{
-            opacity: { duration: 0.5, delay: 1.5 },
-            y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1.5 },
-          }}
-        >
-          <ArrowDown size={20} />
-        </motion.a>
       </div>
-
-      {/* Gradient fade into the next section for a seamless scroll */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none bg-gradient-to-b from-transparent to-background" />
     </section>
   );
 }

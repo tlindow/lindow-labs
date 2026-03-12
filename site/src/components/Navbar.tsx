@@ -2,42 +2,58 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+} from "framer-motion";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Work With Me", href: "#mentoring" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Content", href: "#content" },
-  { label: "Connect", href: "#connect" },
+  { label: "Events", href: "#events" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  const prefersReducedMotion = useReducedMotion();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 20);
+  });
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
+    <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+      <motion.div
+        className="glass mx-auto max-w-6xl rounded-md"
+        animate={
+          prefersReducedMotion
+            ? undefined
+            : {
+                width: scrolled ? "min(95vw, 72rem)" : "min(98vw, 74rem)",
+                y: scrolled ? 0 : 2,
+              }
+        }
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="mx-auto flex h-16 items-center justify-between px-5 sm:px-7">
           <a
             href="#"
-            className="font-display font-semibold text-lg sm:text-xl tracking-tight text-foreground"
+            className="font-display text-xl tracking-wide text-foreground sm:text-2xl"
           >
             Tyler Lindow
           </a>
 
-          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
+          <ul className="hidden items-center gap-7 md:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="relative text-sm font-medium text-muted hover:text-foreground transition-colors group"
+                  className="text-sm font-medium tracking-[0.08em] text-muted uppercase transition-colors hover:text-foreground"
                 >
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-violet rounded-full transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -45,41 +61,35 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 -mr-2 text-muted hover:text-foreground"
+            className="p-2 -mr-2 text-muted transition-colors hover:text-foreground md:hidden"
             aria-label="Toggle navigation"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
-
-        {/* Scroll progress bar */}
-        <motion.div
-          className="h-[2px] bg-gradient-to-r from-violet via-indigo to-sky origin-left"
-          style={{ scaleX }}
-        />
-      </div>
+      </motion.div>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            className="md:hidden border-b border-border bg-background/95 backdrop-blur-md"
+            className="glass mx-auto mt-2 max-w-6xl rounded-md md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <ul className="flex flex-col py-3 px-4 gap-1">
+            <ul className="flex flex-col gap-1 px-4 py-4">
               {links.map((l, i) => (
                 <motion.li
                   key={l.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
+                  transition={{ delay: i * 0.06, duration: 0.4, ease: "easeOut" }}
                 >
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block py-2.5 px-3 rounded-lg text-[15px] font-medium text-muted hover:text-foreground hover:bg-surface-alt transition-colors"
+                    className="block rounded-sm px-3 py-2.5 text-[0.8rem] font-medium uppercase tracking-[0.09em] text-muted transition-colors hover:bg-surface-elevated hover:text-foreground"
                   >
                     {l.label}
                   </a>

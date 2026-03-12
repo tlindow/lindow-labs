@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,21 +8,21 @@ const inter = Inter({
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Lindow — Developer, Builder, Creator",
+  title: "Tyler Lindow Studio — Events & Experiences",
   description:
-    "Personal website of Tyler Lindow. Software developer, creative coder, and lifelong learner building for the web.",
+    "A premium studio site for Tyler Lindow featuring curated events and ways to get involved.",
   openGraph: {
-    title: "Tyler Lindow — Developer, Builder, Creator",
+    title: "Tyler Lindow Studio — Events & Experiences",
     description:
-      "Software developer, creative coder, and lifelong learner building for the web.",
+      "Premium, calm, and aspirational studio presence centered around events.",
     type: "website",
   },
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${plusJakartaSans.variable} antialiased`}>
+      <body className={`${inter.variable} ${playfairDisplay.variable} antialiased`}>
         {children}
       </body>
     </html>
