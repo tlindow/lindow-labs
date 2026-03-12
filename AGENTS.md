@@ -6,6 +6,18 @@ This repository contains **Tyler Lindow's personal website**, built with Next.js
 
 The first prompt of the session should always enter a planning mode, unless otherwise stated.
 
+When planning, treat Markdown notes as the primary source of intent before relying on anything user-facing in the app.
+
+Planning priority order:
+
+1. `/logs/*.md` entries, especially `## Context`, `## Reflections`, `## Decisions`, and `## Next`
+2. `README.md`, `site/README.md`, and other repository Markdown that explains direction or constraints
+3. The current frontend implementation in `site/src/components/` and `site/src/app/`
+
+Planning questions should be concise, synthesis-oriented, and based on the underlying thoughts captured in Markdown files. Do not simply restate or overfit to the exact wording currently printed on the frontend unless the task is explicitly about UI copy or presentation.
+
+When there is tension between written reflections and the current UI, assume the Markdown captures broader intent and use the UI as the current expression of that intent rather than the sole source of truth.
+
 ### Project structure
 
 - `site/` — the Next.js application
