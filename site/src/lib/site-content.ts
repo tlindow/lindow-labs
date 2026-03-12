@@ -8,14 +8,31 @@ import {
 } from "@/lib/site-content-schema";
 
 const LOCAL_CONTENT_PATH = path.join(process.cwd(), "content", "site-content.json");
-const CONTENT_KEY = "site:content:v1";
+const CONTENT_KEY = process.env.CMS_CONTENT_KEY?.trim() || "site:content:global:v1";
+
+function readEnv(name: string): string {
+  return process.env[name]?.trim() ?? "";
+}
+
+function getRedisCredentials() {
+  const url = readEnv("CMS_UPSTASH_REDIS_REST_URL") || readEnv("UPSTASH_REDIS_REST_URL");
+  const token =
+    readEnv("CMS_UPSTASH_REDIS_REST_TOKEN") || readEnv("UPSTASH_REDIS_REST_TOKEN");
+
+  return { url, token };
+}
 
 function createRedisClient(): Redis | null {
-  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  const { url, token } = getRedisCredentials();
+
+  if (!url || !token) {
     return null;
   }
 
-  return Redis.fromEnv();
+  return new Redis({
+    url,
+    token,
+  });
 }
 
 const redis = createRedisClient();
