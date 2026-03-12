@@ -2,6 +2,10 @@
 
 This repository contains **Tyler Lindow's personal website**, built with Next.js, TypeScript, and Tailwind CSS. It serves as a marketing landing page — the front door to future products and services.
 
+### Planning mode
+
+The first prompt of the session should always enter a planning mode, unless otherwise stated.
+
 ### Project structure
 
 - `site/` — the Next.js application
