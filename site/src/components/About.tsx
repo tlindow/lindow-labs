@@ -2,6 +2,7 @@
 
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
 import CountUp from "@/components/animations/CountUp";
+import aboutContent from "@/content/about.json";
 
 export default function About() {
   return (
@@ -16,43 +17,18 @@ export default function About() {
 
         <ScrollReveal delay={0.15}>
           <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
-            <p>
-              I got into software development because I realized I had no idea how
-              software worked. At the time I was doing research at the Field
-              Museum in Chicago when I saw someone pull up a terminal and open an
-              application that visitors would interact with. I went through an
-              immersive coding program, dove into JavaScript and React, and never
-              looked back. Building for the web scratches every itch I have
-              &mdash; problem-solving, design, creativity, and the instant feedback
-              of seeing something come to life in a browser.
-            </p>
-            <p>
-              I&rsquo;m drawn to projects at the intersection of technology and
-              creativity &mdash; whether that&rsquo;s an interactive booking
-              system, a generative art sketch, or a tool that makes
-              someone&rsquo;s workflow easier. I&rsquo;m passionate about AI in
-              software and always looking to learn more about what people are
-              building.
-            </p>
-            <p>
-              Outside of code, I&rsquo;m curious about storytelling, design,
-              and how technology brings people together. Right now I&rsquo;m
-              focused on building in public, mentoring other developers, and
-              creating content.
-            </p>
+            {aboutContent.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         </ScrollReveal>
 
         <StaggerContainer className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8" staggerDelay={0.15}>
-          <StaggerItem>
-            <Stat label="GitHub Repos" value="45+" color="bg-rose-light" />
-          </StaggerItem>
-          <StaggerItem>
-            <Stat label="Primary Stack" value="React / TS" color="bg-sky-light" />
-          </StaggerItem>
-          <StaggerItem>
-            <Stat label="Focus" value="Mentoring" color="bg-mint-light" />
-          </StaggerItem>
+          {aboutContent.stats.map((stat) => (
+            <StaggerItem key={stat.label}>
+              <Stat label={stat.label} value={stat.value} color={stat.color} />
+            </StaggerItem>
+          ))}
         </StaggerContainer>
       </div>
     </section>

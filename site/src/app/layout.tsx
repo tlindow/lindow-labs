@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import metaContent from "@/content/meta.json";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,13 +17,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Lindow — Developer, Builder, Creator",
-  description:
-    "Personal website of Tyler Lindow. Software developer, creative coder, and lifelong learner building for the web.",
+  title: metaContent.title,
+  description: metaContent.description,
   openGraph: {
-    title: "Tyler Lindow — Developer, Builder, Creator",
-    description:
-      "Software developer, creative coder, and lifelong learner building for the web.",
+    title: metaContent.ogTitle,
+    description: metaContent.ogDescription,
     type: "website",
   },
 };

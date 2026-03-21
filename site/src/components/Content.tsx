@@ -1,35 +1,11 @@
 "use client";
 
-import { Video, FileText, Rss, ArrowRight } from "lucide-react";
+import { Video, FileText, Rss, ArrowRight, type LucideIcon } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
 import MagneticButton from "@/components/animations/MagneticButton";
+import contentSection from "@/content/content-section.json";
 
-const formats = [
-  {
-    icon: Video,
-    title: "Video Walkthroughs",
-    description:
-      "Short-form demos and walkthroughs of projects, tools, and techniques — shared on LinkedIn.",
-    iconBg: "bg-rose-light",
-    iconColor: "text-rose",
-  },
-  {
-    icon: FileText,
-    title: "Write-Ups",
-    description:
-      "Posts about what I'm building, the decisions behind it, and things I wish I'd known sooner.",
-    iconBg: "bg-sky-light",
-    iconColor: "text-sky",
-  },
-  {
-    icon: Rss,
-    title: "Newsletter",
-    description:
-      "A regular digest of what I'm learning, links worth reading, and reflections on the developer journey.",
-    iconBg: "bg-amber-light",
-    iconColor: "text-amber",
-  },
-];
+const iconMap: Record<string, LucideIcon> = { Video, FileText, Rss };
 
 export default function Content() {
   return (
@@ -37,25 +13,23 @@ export default function Content() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            Content & Newsletter
+            {contentSection.heading}
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-mint" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            I&rsquo;m creating content about software development, creative
-            coding, and the things I&rsquo;m learning. The goal is to build a
-            library of resources that&rsquo;s genuinely useful.
+            {contentSection.intro}
           </p>
         </ScrollReveal>
 
         <StaggerContainer className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-3" staggerDelay={0.12}>
-          {formats.map((f) => {
-            const Icon = f.icon;
+          {contentSection.formats.map((f) => {
+            const Icon = iconMap[f.icon];
             return (
               <StaggerItem key={f.title}>
                 <div className="text-center sm:text-left group">
                   <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${f.iconBg} ${f.iconColor} transition-transform duration-300 group-hover:scale-110`}>
-                    <Icon size={22} />
+                    {Icon && <Icon size={22} />}
                   </div>
                   <h3 className="mt-3 text-base sm:text-lg font-semibold text-foreground">
                     {f.title}
@@ -72,18 +46,18 @@ export default function Content() {
         <ScrollReveal delay={0.2}>
           <div className="mt-10 sm:mt-12 rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg font-medium text-foreground">
-              Follow along &mdash; I&rsquo;m publishing on LinkedIn first.
+              {contentSection.followHeading}
             </p>
             <p className="mt-2 text-sm text-muted">
-              Videos, write-ups, and honest reflections on the developer journey.
+              {contentSection.followBody}
             </p>
             <MagneticButton
-              href="https://www.linkedin.com/in/tlindow"
+              href={contentSection.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
             >
-              Follow on LinkedIn
+              {contentSection.followCtaLabel}
               <ArrowRight size={14} />
             </MagneticButton>
           </div>

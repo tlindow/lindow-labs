@@ -1,0 +1,31 @@
+{
+  "heading": "Content & Newsletter",
+  "intro": "I'm creating content about software development, creative coding, and the things I'm learning. The goal is to build a library of resources that's genuinely useful.",
+  "followHeading": "Follow along — I'm publishing on LinkedIn first.",
+  "followBody": "Videos, write-ups, and honest reflections on the developer journey.",
+  "followCtaLabel": "Follow on LinkedIn",
+  "linkedinUrl": "https://www.linkedin.com/in/tlindow",
+  "formats": [
+    {
+      "icon": "Video",
+      "title": "Video Walkthroughs",
+      "description": "Short-form demos and walkthroughs of projects, tools, and techniques — shared on LinkedIn.",
+      "iconBg": "bg-rose-light",
+      "iconColor": "text-rose"
+    },
+    {
+      "icon": "FileText",
+      "title": "Write-Ups",
+      "description": "Posts about what I'm building, the decisions behind it, and things I wish I'd known sooner.",
+      "iconBg": "bg-sky-light",
+      "iconColor": "text-sky"
+    },
+    {
+      "icon": "Rss",
+      "title": "Newsletter",
+      "description": "A regular digest of what I'm learning, links worth reading, and reflections on the developer journey.",
+      "iconBg": "bg-amber-light",
+      "iconColor": "text-amber"
+    }
+  ]
+}

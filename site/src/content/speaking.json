@@ -1,0 +1,27 @@
+{
+  "intro": "I'm building toward sharing ideas on stage and in virtual events. Here are topics I'm excited to talk about.",
+  "ctaLabel": "Interested in having me speak? Let's talk",
+  "email": "tyler.lindow@gmail.com",
+  "topics": [
+    {
+      "title": "Building in Public",
+      "description": "Lessons from learning, failing, and shipping — the honest version of the developer journey.",
+      "bg": "bg-rose-light"
+    },
+    {
+      "title": "Creative Coding",
+      "description": "Using code as a medium for art, storytelling, and interactive experiences.",
+      "bg": "bg-amber-light"
+    },
+    {
+      "title": "Career Transitions",
+      "description": "Navigating the path into software development from a non-traditional background.",
+      "bg": "bg-sky-light"
+    },
+    {
+      "title": "Developer Tooling & Workflow",
+      "description": "What makes teams productive and developers happy — tools, habits, and culture.",
+      "bg": "bg-mint-light"
+    }
+  ]
+}

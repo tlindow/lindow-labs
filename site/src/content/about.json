@@ -1,0 +1,12 @@
+{
+  "paragraphs": [
+    "I got into software development because I realized I had no idea how software worked. At the time I was doing research at the Field Museum in Chicago when I saw someone pull up a terminal and open an application that visitors would interact with. I went through an immersive coding program, dove into JavaScript and React, and never looked back. Building for the web scratches every itch I have — problem-solving, design, creativity, and the instant feedback of seeing something come to life in a browser.",
+    "I'm drawn to projects at the intersection of technology and creativity — whether that's an interactive booking system, a generative art sketch, or a tool that makes someone's workflow easier. I'm passionate about AI in software and always looking to learn more about what people are building.",
+    "Outside of code, I'm curious about storytelling, design, and how technology brings people together. Right now I'm focused on building in public, mentoring other developers, and creating content."
+  ],
+  "stats": [
+    { "label": "GitHub Repos", "value": "45+", "color": "bg-rose-light" },
+    { "label": "Primary Stack", "value": "React / TS", "color": "bg-sky-light" },
+    { "label": "Focus", "value": "Mentoring", "color": "bg-mint-light" }
+  ]
+}

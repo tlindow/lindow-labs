@@ -1,0 +1,60 @@
+{
+  "intro": "A selection of projects I've built.",
+  "githubUrl": "https://github.com/tlindow?tab=repositories",
+  "projects": [
+    {
+      "title": "Dreaming with Marisól",
+      "description": "My wife's business website.",
+      "tech": ["TypeScript"],
+      "url": "https://github.com/tlindow/dreamingwithmarisol",
+      "accent": "group-hover:border-rose/40",
+      "hover": "group-hover:text-rose",
+      "glow": "group-hover:shadow-rose/10"
+    },
+    {
+      "title": "Booking Module",
+      "description": "Component-as-a-service handling date selection, price calculation, and reservation booking.",
+      "tech": ["JavaScript", "React"],
+      "url": "https://github.com/tlindow/booking-module",
+      "accent": "group-hover:border-peach/40",
+      "hover": "group-hover:text-peach",
+      "glow": "group-hover:shadow-peach/10"
+    },
+    {
+      "title": "Dog Breed Search",
+      "description": "A React app for searching and browsing dog breeds by name.",
+      "tech": ["React", "JavaScript"],
+      "url": "https://github.com/tlindow/dogbreed_search_react",
+      "accent": "group-hover:border-mint/40",
+      "hover": "group-hover:text-mint",
+      "glow": "group-hover:shadow-mint/10"
+    },
+    {
+      "title": "Memory Game",
+      "description": "A browser-based card-matching memory game.",
+      "tech": ["CSS", "JavaScript"],
+      "url": "https://github.com/tlindow/Memory-Game-fend",
+      "accent": "group-hover:border-sky/40",
+      "hover": "group-hover:text-sky",
+      "glow": "group-hover:shadow-sky/10"
+    },
+    {
+      "title": "Greywater Projection",
+      "description": "Data visualization and projection tool.",
+      "tech": ["JavaScript", "D3"],
+      "url": "https://github.com/tlindow/greywater_projection",
+      "accent": "group-hover:border-indigo/40",
+      "hover": "group-hover:text-indigo",
+      "glow": "group-hover:shadow-indigo/10"
+    },
+    {
+      "title": "p5.js Experiments",
+      "description": "Creative coding — spiraling circles and generative art sketches.",
+      "tech": ["p5.js", "JavaScript"],
+      "url": "https://github.com/tlindow/p5jstest",
+      "accent": "group-hover:border-violet/40",
+      "hover": "group-hover:text-violet",
+      "glow": "group-hover:shadow-violet/10"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import GradientBeam from "@/components/animations/GradientBeam";
 import AnimatedText from "@/components/animations/AnimatedText";
 import MagneticButton from "@/components/animations/MagneticButton";
+import heroContent from "@/content/hero.json";
 
 export default function Hero() {
   return (
@@ -29,8 +30,8 @@ export default function Hero() {
             />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
               <Image
-                src="/IMG_0548.jpeg"
-                alt="Tyler Lindow"
+                src={heroContent.profileImage}
+                alt={heroContent.profileImageAlt}
                 fill
                 sizes="(max-width: 640px) 128px, 160px"
                 className="object-cover object-[center_20%]"
@@ -46,11 +47,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Software Developer &middot; Builder &middot; Mentor
+          {heroContent.tagline}
         </motion.p>
 
         <AnimatedText
-          text="Hey, I'm Tyler."
+          text={heroContent.heading}
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
@@ -62,8 +63,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
         >
-          I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
+          {heroContent.bio}
         </motion.p>
 
         <motion.div
@@ -73,14 +73,14 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.1 }}
         >
           <MagneticButton
-            href="#mentoring"
+            href={heroContent.ctaHref}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
           >
-            Work With Me
+            {heroContent.ctaLabel}
           </MagneticButton>
           <div className="flex gap-3 w-full sm:w-auto">
             <MagneticButton
-              href="https://www.linkedin.com/in/tlindow"
+              href={heroContent.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
@@ -89,7 +89,7 @@ export default function Hero() {
               <span className="sm:inline">LinkedIn</span>
             </MagneticButton>
             <MagneticButton
-              href="https://github.com/tlindow"
+              href={heroContent.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
@@ -98,7 +98,7 @@ export default function Hero() {
               <span className="sm:inline">GitHub</span>
             </MagneticButton>
             <MagneticButton
-              href="mailto:tyler.lindow@gmail.com"
+              href={`mailto:${heroContent.email}`}
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
             >
               <Mail size={16} />

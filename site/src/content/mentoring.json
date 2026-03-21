@@ -1,0 +1,42 @@
+{
+  "badge": "Now booking 1:1 sessions",
+  "heading": "Work With Me",
+  "intro": "I love helping developers grow. Whether you're just starting out, switching careers, or looking to level up — I'd genuinely enjoy working with you. Let's figure it out together.",
+  "ctaLabel": "Book a Session",
+  "calendlyUrl": "https://calendly.com/tylerlindow/elevate",
+  "howICanHelp": "How I can help",
+  "offerings": [
+    {
+      "icon": "Code2",
+      "title": "Code Reviews & Pairing",
+      "description": "Walk through your code together, talk through trade-offs, and sharpen your problem-solving.",
+      "color": "bg-sky-light",
+      "iconColor": "text-sky"
+    },
+    {
+      "icon": "Compass",
+      "title": "Career Coaching",
+      "description": "Navigate bootcamps, self-study, the job search, or your next career move with someone who's been there.",
+      "color": "bg-peach-light",
+      "iconColor": "text-peach"
+    },
+    {
+      "icon": "FolderOpen",
+      "title": "Portfolio & Brand Building",
+      "description": "Build a GitHub presence, personal site, and project portfolio that shows what you can really do.",
+      "color": "bg-mint-light",
+      "iconColor": "text-mint"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "Open Office Hours",
+      "description": "No agenda needed — bring your questions, your ideas, or just come to think out loud.",
+      "color": "bg-violet-light",
+      "iconColor": "text-violet"
+    }
+  ],
+  "footerHeading": "Not sure where to start? That's totally fine.",
+  "footerBody": "Send me a message and tell me a bit about where you're at. We'll find the right way to work together — no pressure, just a conversation.",
+  "footerCtaLabel": "Send me a message",
+  "email": "tyler.lindow@gmail.com"
+}

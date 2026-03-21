@@ -2,33 +2,7 @@
 
 import { Mic, ArrowRight } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/animations/ScrollReveal";
-
-const topics = [
-  {
-    title: "Building in Public",
-    description:
-      "Lessons from learning, failing, and shipping — the honest version of the developer journey.",
-    bg: "bg-rose-light",
-  },
-  {
-    title: "Creative Coding",
-    description:
-      "Using code as a medium for art, storytelling, and interactive experiences.",
-    bg: "bg-amber-light",
-  },
-  {
-    title: "Career Transitions",
-    description:
-      "Navigating the path into software development from a non-traditional background.",
-    bg: "bg-sky-light",
-  },
-  {
-    title: "Developer Tooling & Workflow",
-    description:
-      "What makes teams productive and developers happy — tools, habits, and culture.",
-    bg: "bg-mint-light",
-  },
-];
+import speakingContent from "@/content/speaking.json";
 
 export default function Speaking() {
   return (
@@ -44,13 +18,12 @@ export default function Speaking() {
           <div className="mt-2 ml-9 sm:ml-10 h-1 w-16 rounded-full bg-rose" />
 
           <p className="mt-5 sm:mt-6 text-muted text-[15px] sm:text-lg max-w-2xl">
-            I&rsquo;m building toward sharing ideas on stage and in virtual
-            events. Here are topics I&rsquo;m excited to talk about.
+            {speakingContent.intro}
           </p>
         </ScrollReveal>
 
         <StaggerContainer className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2" staggerDelay={0.1}>
-          {topics.map((t) => (
+          {speakingContent.topics.map((t) => (
             <StaggerItem key={t.title}>
               <div
                 className={`rounded-2xl ${t.bg} p-5 sm:p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5`}
@@ -69,10 +42,10 @@ export default function Speaking() {
         <ScrollReveal delay={0.3}>
           <div className="mt-8 sm:mt-10">
             <a
-              href="mailto:tyler.lindow@gmail.com"
+              href={`mailto:${speakingContent.email}`}
               className="inline-flex items-center gap-2 text-sm font-medium text-violet hover:underline group"
             >
-              Interested in having me speak? Let&rsquo;s talk
+              {speakingContent.ctaLabel}
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </a>
           </div>
