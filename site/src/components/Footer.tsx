@@ -27,6 +27,7 @@ const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "Speaking", href: "#speaking" },
   { label: "Content", href: "#content" },
+  { label: "Podcast", href: "/podcast" },
 ];
 
 export default function Footer() {
