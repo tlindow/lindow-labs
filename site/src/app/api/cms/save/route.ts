@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { auth } from "@/auth";
 
 const VALID_SECTIONS = [
   "hero",
@@ -25,9 +26,8 @@ function getBranch(): string {
 }
 
 export async function POST(req: NextRequest) {
-  // Auth check
-  const authCookie = req.cookies.get("cms_auth");
-  if (authCookie?.value !== "1") {
+  const session = await auth();
+  if (!session) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

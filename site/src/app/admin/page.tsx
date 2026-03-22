@@ -1,5 +1,5 @@
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { auth } from "@/auth";
 import AdminEditor from "./AdminEditor";
 import heroContent from "@/content/hero.json";
 import aboutContent from "@/content/about.json";
@@ -10,10 +10,9 @@ import contentSection from "@/content/content-section.json";
 import metaContent from "@/content/meta.json";
 
 export default async function AdminPage() {
-  const cookieStore = await cookies();
-  const auth = cookieStore.get("cms_auth");
+  const session = await auth();
 
-  if (auth?.value !== "1") {
+  if (!session) {
     redirect("/admin/login");
   }
 
