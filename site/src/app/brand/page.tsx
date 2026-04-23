@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { brandMarks, type BrandMark } from "@/components/brand/marks";
+import MarkDownload from "@/components/brand/MarkDownload";
 
 export const metadata: Metadata = {
   title: "Brand Marks — Lindow Labs",
@@ -61,7 +62,7 @@ function MarkCard({ mark, index }: { mark: BrandMark; index: number }) {
       id={mark.id}
       className="scroll-mt-24 rounded-2xl border border-border bg-surface overflow-hidden"
     >
-      <header className="px-6 sm:px-8 py-5 border-b border-border flex items-baseline gap-3 flex-wrap">
+      <header className="px-6 sm:px-8 py-5 border-b border-border flex items-center gap-3 flex-wrap">
         <span className="text-xs font-semibold tracking-widest uppercase text-muted tabular-nums">
           {String(index + 1).padStart(2, "0")}
         </span>
@@ -69,6 +70,9 @@ function MarkCard({ mark, index }: { mark: BrandMark; index: number }) {
           {mark.name}
         </h2>
         <span className="text-sm text-muted">· {mark.tagline}</span>
+        <div className="ml-auto">
+          <MarkDownload markId={mark.id} />
+        </div>
       </header>
 
       <div className="grid md:grid-cols-[1.3fr_1fr] gap-0 md:divide-x divide-border">
