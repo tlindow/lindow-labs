@@ -68,12 +68,13 @@ export default function Tracks() {
             Tracks
           </p>
           <h2 className="mt-2 font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            From engineer to tinker.
+            From engineer to tinkerer.
           </h2>
           <div className="mt-3 h-1 w-16 rounded-full bg-amber" />
           <p className="mt-5 text-[15px] sm:text-lg text-muted max-w-2xl">
             Four ways in. Pick one, stack them, or skip straight to build
-            nights. Every track meets weekly at the Hub.
+            nights. Whatever you make on a track is yours to keep &mdash;
+            the Hub is just the room where it got made.
           </p>
         </ScrollReveal>
 

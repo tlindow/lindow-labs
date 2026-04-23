@@ -1,6 +1,6 @@
 ## Cursor Cloud specific instructions
 
-This repository contains the **Tinker Hub** marketing site, built with Next.js, TypeScript, and Tailwind CSS. The Tinker Hub is a San Diego maker space for software engineers, IT technologists, and the curious — a hands-on shop where engineers become tinkers (solder, print, retrofit, build hardware). The site is the front door: idea, space, tracks, schedule, membership, toolkit.
+This repository contains the **Tinker Hub** marketing site, built with Next.js, TypeScript, and Tailwind CSS. The Tinker Hub is a San Diego maker space for software engineers and IT technologists — a hands-on shop where engineers become tinkerers. Core idea: **a tinkerer builds for themselves.** Engineers spend all day building for employers, users, and roadmaps; the Hub is the other bench, where the project, spec, and audience are all you. The site is the front door: idea, space, tracks, schedule, membership, toolkit.
 
 ### Planning mode
 

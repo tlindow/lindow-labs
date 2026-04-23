@@ -1,6 +1,6 @@
 "use client";
 
-import { Terminal, ArrowRight, CircuitBoard } from "lucide-react";
+import { Users, User, Wrench } from "lucide-react";
 import ScrollReveal, {
   StaggerContainer,
   StaggerItem,
@@ -12,7 +12,7 @@ export default function Idea() {
       <div className="mx-auto max-w-3xl">
         <ScrollReveal>
           <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-foreground">
-            The gap between shipping code and making a thing.
+            A tinkerer builds for themselves.
           </h2>
           <div className="mt-2 h-1 w-16 rounded-full bg-amber" />
         </ScrollReveal>
@@ -20,21 +20,21 @@ export default function Idea() {
         <ScrollReveal delay={0.15}>
           <div className="mt-8 sm:mt-10 space-y-5 text-[15px] sm:text-lg leading-relaxed text-muted">
             <p>
-              You know how to ship software. You&rsquo;ve pushed code on a
-              Friday and lived. You&rsquo;ve debugged a race condition at 1am.
-              You can reason about a system that exists mostly as text.
+              You spend your day building for someone else. An employer, a
+              user, a roadmap, a stakeholder with opinions. The work is real.
+              The audience isn&rsquo;t you.
             </p>
             <p>
-              But the physical world has its own grammar. Voltage drops, cold
-              solder joints, thermal margins, tolerances, the stubbornness of
-              a 3D print that just won&rsquo;t stick to the bed. Code
-              compiles. Atoms negotiate.
+              A tinkerer builds for themselves. The project is the point.
+              There&rsquo;s no ticket, no standup, no user story &mdash; just
+              the thing you want to exist, and the stubbornness to make it.
+              No deadline except bedtime. No definition of done except the
+              one in your head.
             </p>
             <p>
-              The Tinker Hub exists for engineers who want the other half of
-              the craft &mdash; a bench, a soldering iron, a workshop full of
-              people who already shipped today and now want to make something
-              that clicks when you press it.
+              The Tinker Hub is the bench for that. The tools, the space, and
+              the people &mdash; so the project you&rsquo;d build for yourself
+              anyway finally gets built, and gets built well.
             </p>
           </div>
         </ScrollReveal>
@@ -45,27 +45,27 @@ export default function Idea() {
         >
           <StaggerItem>
             <Step
-              icon={<Terminal size={22} strokeWidth={1.75} />}
-              label="Start"
-              title="You write software."
+              icon={<Users size={22} strokeWidth={1.75} />}
+              label="Day job"
+              title="You build for someone else."
               tint="bg-sky-light"
               dot="text-sky"
             />
           </StaggerItem>
           <StaggerItem>
             <Step
-              icon={<ArrowRight size={22} strokeWidth={1.75} />}
+              icon={<Wrench size={22} strokeWidth={1.75} />}
               label="Here"
-              title="You get your hands on it."
+              title="You build for you."
               tint="bg-amber-light"
               dot="text-amber"
             />
           </StaggerItem>
           <StaggerItem>
             <Step
-              icon={<CircuitBoard size={22} strokeWidth={1.75} />}
-              label="End"
-              title="You ship a thing."
+              icon={<User size={22} strokeWidth={1.75} />}
+              label="After"
+              title="You keep what you made."
               tint="bg-mint-light"
               dot="text-mint"
             />

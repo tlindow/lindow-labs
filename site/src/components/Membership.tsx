@@ -38,7 +38,7 @@ const tiers = [
     featured: true,
   },
   {
-    name: "Founding Tinker",
+    name: "Founding Tinkerer",
     price: "$99",
     cadence: "per month, locked",
     blurb: "First 50 members. Price never changes as long as you stay.",
@@ -49,7 +49,7 @@ const tiers = [
       "Lifetime founder rate",
     ],
     cta: "Claim a spot",
-    href: "mailto:hello@thetinkerhub.co?subject=Founding%20Tinker",
+    href: "mailto:hello@thetinkerhub.co?subject=Founding%20Tinkerer",
     featured: false,
   },
 ];

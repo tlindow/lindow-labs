@@ -2,7 +2,7 @@
 
 **A San Diego maker space for software engineers, IT technologists, and the curious.**
 
-A hands-on shop where engineers become tinkers — solder, print, retrofit, and ship hardware alongside people who already know the commit message.
+A hands-on shop where engineers become tinkerers — people who build for themselves. The other bench: no ticket, no standup, no user story, just your project and the tools to make it real.
 
 This repo powers the Tinker Hub marketing site.
 

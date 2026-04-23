@@ -18,11 +18,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "The Tinker Hub — San Diego maker space for tech",
   description:
-    "A hands-on shop in San Diego for software engineers, IT technologists, and the curious. Solder, print, retrofit, and build hardware alongside people who already shipped today.",
+    "A hands-on shop in San Diego for engineers and IT technologists who want to build for themselves. The other bench — no ticket, no standup, no user story. Just your project.",
   openGraph: {
     title: "The Tinker Hub — San Diego maker space for tech",
     description:
-      "Where engineers become tinkers. A San Diego workshop for software and IT professionals who want the other half of the craft.",
+      "Where engineers become tinkerers. A San Diego workshop for people who spend their day building for someone else — and want a bench where the project is theirs.",
     type: "website",
   },
 };

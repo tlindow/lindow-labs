@@ -75,3 +75,36 @@ half of the craft.
   are orphaned. Delete or replace with workshop photography once we have it.
 - Favicon still carries the old site's identity — swap when we have a
   Tinker Hub mark.
+
+---
+
+## Refinement — same day
+
+Sharpened the core definition: **a tinkerer builds for themselves.**
+That is the load-bearing idea. The physical/hardware angle is still true
+but it's a *means*, not the thesis. Tinkering is defined by audience
+(you), not by medium (atoms vs. bits).
+
+### Changes
+
+- Switched noun from "tinker" to "tinkerer" (standard English form).
+  Kept "The Tinker Hub" as the brand — it reads naturally as an
+  adjective-noun compound.
+- Renamed membership tier "Founding Tinker" → "Founding Tinkerer".
+- Rewrote Hero subhead and Idea section body around the "building for
+  yourself" thesis. Day-job-vs-tinkering contrast is now the spine.
+- Updated the three Idea chips to express the arc:
+  "You build for someone else" → "You build for you" → "You keep what
+  you made."
+- Updated Tracks intro: "Whatever you make on a track is yours to keep."
+- Updated metadata, README, AGENTS.md to reflect the sharper framing.
+
+### Why this matters
+
+The first framing (hardware vs. software) could have pulled the Hub
+toward being "a hackerspace with better branding." That's a crowded
+category. The "builds for themselves" framing instead positions the
+Hub against the day job, not against software — which is a much larger
+and emptier cultural gap. A tinkerer could be building a janky home
+server, a mechanical keyboard, a pinball machine, or a CLI that only
+they will ever use. All of it counts, as long as the audience is one.

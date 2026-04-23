@@ -41,11 +41,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          San Diego &middot; A maker space for tech
+          San Diego &middot; For people who build for themselves
         </motion.p>
 
         <AnimatedText
-          text="Where engineers become tinkers."
+          text="Where engineers become tinkerers."
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
@@ -58,9 +58,10 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.9 }}
         >
           The Tinker Hub is a hands-on shop in San Diego for software
-          engineers, IT technologists, and the kind of people who&rsquo;d
-          rather open the case than replace it. Solder, print, retrofit, and
-          ship hardware alongside people who already know the commit message.
+          engineers and IT technologists who spend all day building for
+          someone else. This is the other bench &mdash; the one where the
+          project is yours, the spec is yours, and the only person you
+          ship to is you.
         </motion.p>
 
         <motion.div
