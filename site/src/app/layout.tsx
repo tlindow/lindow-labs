@@ -16,13 +16,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Lindow — Developer, Builder, Creator",
+  title: "The Tinker Hub — San Diego maker space for tech",
   description:
-    "Personal website of Tyler Lindow. Software developer, creative coder, and lifelong learner building for the web.",
+    "A hands-on shop in San Diego for software engineers, IT technologists, and the curious. Solder, print, retrofit, and build hardware alongside people who already shipped today.",
   openGraph: {
-    title: "Tyler Lindow — Developer, Builder, Creator",
+    title: "The Tinker Hub — San Diego maker space for tech",
     description:
-      "Software developer, creative coder, and lifelong learner building for the web.",
+      "Where engineers become tinkers. A San Diego workshop for software and IT professionals who want the other half of the craft.",
     type: "website",
   },
 };

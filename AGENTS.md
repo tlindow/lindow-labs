@@ -1,6 +1,6 @@
 ## Cursor Cloud specific instructions
 
-This repository contains **Tyler Lindow's personal website**, built with Next.js, TypeScript, and Tailwind CSS. It serves as a marketing landing page — the front door to future products and services.
+This repository contains the **Tinker Hub** marketing site, built with Next.js, TypeScript, and Tailwind CSS. The Tinker Hub is a San Diego maker space for software engineers, IT technologists, and the curious — a hands-on shop where engineers become tinkers (solder, print, retrofit, build hardware). The site is the front door: idea, space, tracks, schedule, membership, toolkit.
 
 ### Planning mode
 
@@ -22,11 +22,11 @@ When there is tension between written reflections and the current UI, assume the
 
 - `site/` — the Next.js application
   - `src/app/` — App Router pages and layout
-  - `src/components/` — React components (Navbar, Hero, About, Portfolio, Speaking, Mentoring, Content, TechStack, Footer)
+  - `src/components/` — React components (Navbar, Hero, Idea, Space, Tracks, Schedule, Membership, Toolkit, Footer)
   - `src/components/animations/` — Reusable animation components (ScrollReveal, AnimatedText, CountUp, FloatingOrbs, GradientBeam, MagneticButton)
   - `public/` — static assets (favicon, images)
-- `logs/` — Personal build logs and reflections (chronological Markdown entries)
-- `README.md` — GitHub profile README (also rendered on the GitHub profile page)
+- `logs/` — Build logs and reflections (chronological Markdown entries)
+- `README.md` — Top-level repo README
 
 ### Environment setup
 
@@ -90,4 +90,4 @@ All animation components are client components (`"use client"`) and are located 
 
 ### Build logs
 
-Personal build logs live in `/logs/`. See `logs/README.md` for the entry format and purpose. These capture decisions, reflections, and context for future reference when building into product spaces or services.
+Build logs live in `/logs/`. See `logs/README.md` for the entry format and purpose. These capture decisions, reflections, and context for future reference as the Tinker Hub evolves.

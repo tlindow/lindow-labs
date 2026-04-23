@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Mentoring from "@/components/Mentoring";
-import Portfolio from "@/components/Portfolio";
-import Speaking from "@/components/Speaking";
-import Content from "@/components/Content";
-import TechStack from "@/components/TechStack";
+import Idea from "@/components/Idea";
+import Space from "@/components/Space";
+import Tracks from "@/components/Tracks";
+import Schedule from "@/components/Schedule";
+import Membership from "@/components/Membership";
+import Toolkit from "@/components/Toolkit";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,12 +14,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Mentoring />
-        <Portfolio />
-        <Speaking />
-        <Content />
-        <TechStack />
+        <Idea />
+        <Space />
+        <Tracks />
+        <Schedule />
+        <Membership />
+        <Toolkit />
       </main>
       <Footer />
     </>

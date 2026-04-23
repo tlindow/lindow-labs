@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Wrench } from "lucide-react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Work With Me", href: "#mentoring" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Content", href: "#content" },
-  { label: "Connect", href: "#connect" },
+  { label: "Idea", href: "#idea" },
+  { label: "Space", href: "#space" },
+  { label: "Tracks", href: "#tracks" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Membership", href: "#membership" },
+  { label: "Toolkit", href: "#toolkit" },
 ];
 
 export default function Navbar() {
@@ -24,9 +24,12 @@ export default function Navbar() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
           <a
             href="#"
-            className="font-display font-semibold text-lg sm:text-xl tracking-tight text-foreground"
+            className="inline-flex items-center gap-2 font-display font-semibold text-base sm:text-lg tracking-tight text-foreground"
           >
-            Tyler Lindow
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber/20 text-amber">
+              <Wrench size={15} strokeWidth={2} />
+            </span>
+            The Tinker Hub
           </a>
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">
@@ -37,7 +40,7 @@ export default function Navbar() {
                   className="relative text-sm font-medium text-muted hover:text-foreground transition-colors group"
                 >
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-violet rounded-full transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-amber rounded-full transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -52,9 +55,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Scroll progress bar */}
         <motion.div
-          className="h-[2px] bg-gradient-to-r from-violet via-indigo to-sky origin-left"
+          className="h-[2px] bg-gradient-to-r from-amber via-peach to-sky origin-left"
           style={{ scaleX }}
         />
       </div>

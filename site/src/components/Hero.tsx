@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { ArrowDown, Linkedin, Github, Mail } from "lucide-react";
+import { ArrowDown, Wrench, Waves } from "lucide-react";
 import { motion } from "framer-motion";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import GradientBeam from "@/components/animations/GradientBeam";
@@ -23,34 +22,30 @@ export default function Hero() {
         >
           <div className="relative group">
             <motion.div
-              className="absolute -inset-3 rounded-full bg-gradient-to-br from-violet/30 via-indigo/20 to-sky/30 blur-xl"
-              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+              className="absolute -inset-3 rounded-full bg-gradient-to-br from-amber/40 via-peach/30 to-sky/40 blur-xl"
+              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.85, 0.5] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-violet/20 ring-offset-4 ring-offset-background shadow-lg">
-              <Image
-                src="/IMG_0548.jpeg"
-                alt="Tyler Lindow"
-                fill
-                sizes="(max-width: 640px) 128px, 160px"
-                className="object-cover object-[center_20%]"
-                priority
-              />
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-surface ring-4 ring-amber/30 ring-offset-4 ring-offset-background shadow-lg flex items-center justify-center">
+              <Wrench size={44} className="text-foreground" strokeWidth={1.5} />
+              <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-sky-light ring-2 ring-background flex items-center justify-center">
+                <Waves size={18} className="text-sky" strokeWidth={2} />
+              </div>
             </div>
           </div>
         </motion.div>
 
         <motion.p
-          className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-violet mb-3 sm:mb-4"
+          className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-amber mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Software Developer &middot; Builder &middot; Mentor
+          San Diego &middot; A maker space for tech
         </motion.p>
 
         <AnimatedText
-          text="Hey, I'm Tyler."
+          text="Where engineers become tinkers."
           as="h1"
           className="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight text-foreground"
           delay={0.5}
@@ -62,8 +57,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
         >
-          I build things for the web, mentor developers, and love sharing what
-          I learn along the way. Based in San Diego.
+          The Tinker Hub is a hands-on shop in San Diego for software
+          engineers, IT technologists, and the kind of people who&rsquo;d
+          rather open the case than replace it. Solder, print, retrofit, and
+          ship hardware alongside people who already know the commit message.
         </motion.p>
 
         <motion.div
@@ -73,42 +70,21 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.1 }}
         >
           <MagneticButton
-            href="#mentoring"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-medium text-white hover:bg-indigo transition-colors hover:shadow-lg hover:shadow-violet/25"
+            href="#membership"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:bg-amber hover:text-foreground transition-colors hover:shadow-lg hover:shadow-amber/25"
           >
-            Work With Me
+            Book a tour
           </MagneticButton>
-          <div className="flex gap-3 w-full sm:w-auto">
-            <MagneticButton
-              href="https://www.linkedin.com/in/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Linkedin size={16} />
-              <span className="sm:inline">LinkedIn</span>
-            </MagneticButton>
-            <MagneticButton
-              href="https://github.com/tlindow"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Github size={16} />
-              <span className="sm:inline">GitHub</span>
-            </MagneticButton>
-            <MagneticButton
-              href="mailto:tyler.lindow@gmail.com"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-5 py-3 text-sm font-medium text-foreground hover:border-violet/30 transition-all"
-            >
-              <Mail size={16} />
-              <span className="sm:inline">Email</span>
-            </MagneticButton>
-          </div>
+          <MagneticButton
+            href="#space"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-border glass px-6 py-3 text-sm font-medium text-foreground hover:border-amber/50 transition-all"
+          >
+            See the space
+          </MagneticButton>
         </motion.div>
 
         <motion.a
-          href="#about"
+          href="#idea"
           className="inline-flex items-center gap-2 mt-12 sm:mt-16 text-sm text-muted hover:text-foreground transition-colors"
           aria-label="Scroll down"
           initial={{ opacity: 0 }}
@@ -122,7 +98,6 @@ export default function Hero() {
         </motion.a>
       </div>
 
-      {/* Gradient fade into the next section for a seamless scroll */}
       <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none bg-gradient-to-b from-transparent to-background" />
     </section>
   );

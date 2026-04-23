@@ -1,14 +1,17 @@
-# Hey, I'm Tyler Lindow
+# The Tinker Hub
 
-**Software Developer · Builder · Creator**
+**A San Diego maker space for software engineers, IT technologists, and the curious.**
 
-I build things for the web and love sharing what I learn along the way. This repo powers my [GitHub profile](https://github.com/tlindow) and contains the source code for my personal website.
+A hands-on shop where engineers become tinkers — solder, print, retrofit, and ship hardware alongside people who already know the commit message.
+
+This repo powers the Tinker Hub marketing site.
 
 ---
 
-## Personal Website
+## Marketing Site
 
-The `site/` directory contains a full Next.js application — my personal website with sections for portfolio, speaking, mentoring, content, and more.
+The `site/` directory contains a full Next.js application for the Tinker Hub
+landing experience: idea, space, tracks, schedule, membership, and toolkit.
 
 ### Quick Start
 
@@ -18,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the site.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Build for Production
 
@@ -33,11 +36,11 @@ npm start
 - **Next.js 16** (App Router) + **React 19**
 - **TypeScript**
 - **Tailwind CSS 4**
+- **Framer Motion** for scroll and micro-interactions
 - **lucide-react** icons
 
 ---
 
-## Connect
+## Location
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tlindow)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tlindow)
+Barrio Logan · San Diego, CA

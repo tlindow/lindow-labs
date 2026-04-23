@@ -1,4 +1,7 @@
-# Tyler Lindow — Personal Website
+# The Tinker Hub — Marketing Site
+
+Landing page for The Tinker Hub, a San Diego maker space for software
+engineers, IT technologists, and the curious.
 
 Built with [Next.js](https://nextjs.org/), TypeScript, and Tailwind CSS.
 
